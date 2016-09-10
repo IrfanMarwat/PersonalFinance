@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE46BC2A1D84595700C34FE9 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC291D84595700C34FE9 /* Registration.storyboard */; };
+		EE46BC2D1D84597D00C34FE9 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC2C1D84597D00C34FE9 /* RegistrationViewController.m */; };
+		EE46BC311D8459D100C34FE9 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC301D8459D100C34FE9 /* DashboardViewController.m */; };
+		EE46BC331D8459E500C34FE9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC321D8459E500C34FE9 /* Dashboard.storyboard */; };
+		EE46BC351D845A1300C34FE9 /* Expense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC341D845A1300C34FE9 /* Expense.storyboard */; };
+		EE46BC381D845A3900C34FE9 /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC371D845A3900C34FE9 /* ExpenseViewController.m */; };
+		EE46BC3B1D845A4E00C34FE9 /* IncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */; };
+		EE46BC3E1D845A6900C34FE9 /* Income.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC3D1D845A6900C34FE9 /* Income.storyboard */; };
 		EE6B5ADA1D83C55C00695ACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5AD91D83C55C00695ACF /* main.m */; };
 		EE6B5ADD1D83C55C00695ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5ADC1D83C55C00695ACF /* AppDelegate.m */; };
-		EE6B5AE01D83C55C00695ACF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5ADF1D83C55C00695ACF /* ViewController.m */; };
+		EE6B5AE01D83C55C00695ACF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5ADF1D83C55C00695ACF /* HomeViewController.m */; };
 		EE6B5AE31D83C55C00695ACF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6B5AE11D83C55C00695ACF /* Main.storyboard */; };
 		EE6B5AE61D83C55C00695ACF /* PersonalFinance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5AE41D83C55C00695ACF /* PersonalFinance.xcdatamodeld */; };
 		EE6B5AE81D83C55C00695ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE6B5AE71D83C55C00695ACF /* Assets.xcassets */; };
@@ -36,12 +44,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE46BC291D84595700C34FE9 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		EE46BC2B1D84597D00C34FE9 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		EE46BC2C1D84597D00C34FE9 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		EE46BC2F1D8459D100C34FE9 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		EE46BC301D8459D100C34FE9 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		EE46BC321D8459E500C34FE9 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		EE46BC341D845A1300C34FE9 /* Expense.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Expense.storyboard; sourceTree = "<group>"; };
+		EE46BC361D845A3900C34FE9 /* ExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseViewController.h; sourceTree = "<group>"; };
+		EE46BC371D845A3900C34FE9 /* ExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseViewController.m; sourceTree = "<group>"; };
+		EE46BC391D845A4E00C34FE9 /* IncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IncomeViewController.h; path = Income/IncomeViewController.h; sourceTree = "<group>"; };
+		EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IncomeViewController.m; path = Income/IncomeViewController.m; sourceTree = "<group>"; };
+		EE46BC3D1D845A6900C34FE9 /* Income.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Income.storyboard; sourceTree = "<group>"; };
 		EE6B5AD51D83C55C00695ACF /* PersonalFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B5AD91D83C55C00695ACF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE6B5ADB1D83C55C00695ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE6B5ADC1D83C55C00695ACF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EE6B5ADE1D83C55C00695ACF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EE6B5ADF1D83C55C00695ACF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE6B5ADE1D83C55C00695ACF /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		EE6B5ADF1D83C55C00695ACF /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		EE6B5AE21D83C55C00695ACF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE6B5AE51D83C55C00695ACF /* PersonalFinance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalFinance.xcdatamodel; sourceTree = "<group>"; };
 		EE6B5AE71D83C55C00695ACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +100,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE46BC221D84573200C34FE9 /* Component Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC2F1D8459D100C34FE9 /* DashboardViewController.h */,
+				EE46BC301D8459D100C34FE9 /* DashboardViewController.m */,
+				EE46BC321D8459E500C34FE9 /* Dashboard.storyboard */,
+			);
+			name = "Component Dashboard";
+			sourceTree = "<group>";
+		};
+		EE46BC231D84579200C34FE9 /* Component Income */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC391D845A4E00C34FE9 /* IncomeViewController.h */,
+				EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */,
+				EE46BC3D1D845A6900C34FE9 /* Income.storyboard */,
+			);
+			name = "Component Income";
+			sourceTree = "<group>";
+		};
+		EE46BC241D84579D00C34FE9 /* Component Expanse */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC341D845A1300C34FE9 /* Expense.storyboard */,
+				EE46BC361D845A3900C34FE9 /* ExpenseViewController.h */,
+				EE46BC371D845A3900C34FE9 /* ExpenseViewController.m */,
+			);
+			name = "Component Expanse";
+			sourceTree = "<group>";
+		};
+		EE46BC251D8457A800C34FE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EE46BC261D8457B600C34FE9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		EE46BC271D8457BD00C34FE9 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Stores;
+			sourceTree = "<group>";
+		};
+		EE46BC281D84592E00C34FE9 /* Account Registration */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC291D84595700C34FE9 /* Registration.storyboard */,
+				EE46BC2B1D84597D00C34FE9 /* RegistrationViewController.h */,
+				EE46BC2C1D84597D00C34FE9 /* RegistrationViewController.m */,
+			);
+			name = "Account Registration";
+			sourceTree = "<group>";
+		};
+		EE46BC2E1D84599800C34FE9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE6B5AE11D83C55C00695ACF /* Main.storyboard */,
+				EE6B5ADE1D83C55C00695ACF /* HomeViewController.h */,
+				EE6B5ADF1D83C55C00695ACF /* HomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		EE6B5ACC1D83C55B00695ACF = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +194,16 @@
 		EE6B5AD71D83C55C00695ACF /* PersonalFinance */ = {
 			isa = PBXGroup;
 			children = (
+				EE46BC271D8457BD00C34FE9 /* Stores */,
+				EE46BC261D8457B600C34FE9 /* Protocols */,
+				EE46BC251D8457A800C34FE9 /* Models */,
+				EE46BC281D84592E00C34FE9 /* Account Registration */,
+				EE46BC2E1D84599800C34FE9 /* Home */,
+				EE46BC221D84573200C34FE9 /* Component Dashboard */,
+				EE46BC241D84579D00C34FE9 /* Component Expanse */,
+				EE46BC231D84579200C34FE9 /* Component Income */,
 				EE6B5ADB1D83C55C00695ACF /* AppDelegate.h */,
 				EE6B5ADC1D83C55C00695ACF /* AppDelegate.m */,
-				EE6B5ADE1D83C55C00695ACF /* ViewController.h */,
-				EE6B5ADF1D83C55C00695ACF /* ViewController.m */,
-				EE6B5AE11D83C55C00695ACF /* Main.storyboard */,
 				EE6B5AE71D83C55C00695ACF /* Assets.xcassets */,
 				EE6B5AE91D83C55C00695ACF /* LaunchScreen.storyboard */,
 				EE6B5AEC1D83C55C00695ACF /* Info.plist */,
@@ -250,8 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE6B5AEB1D83C55C00695ACF /* LaunchScreen.storyboard in Resources */,
+				EE46BC331D8459E500C34FE9 /* Dashboard.storyboard in Resources */,
+				EE46BC2A1D84595700C34FE9 /* Registration.storyboard in Resources */,
 				EE6B5AE81D83C55C00695ACF /* Assets.xcassets in Resources */,
+				EE46BC3E1D845A6900C34FE9 /* Income.storyboard in Resources */,
 				EE6B5AE31D83C55C00695ACF /* Main.storyboard in Resources */,
+				EE46BC351D845A1300C34FE9 /* Expense.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +377,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE6B5AE61D83C55C00695ACF /* PersonalFinance.xcdatamodeld in Sources */,
-				EE6B5AE01D83C55C00695ACF /* ViewController.m in Sources */,
+				EE46BC381D845A3900C34FE9 /* ExpenseViewController.m in Sources */,
+				EE46BC311D8459D100C34FE9 /* DashboardViewController.m in Sources */,
+				EE46BC3B1D845A4E00C34FE9 /* IncomeViewController.m in Sources */,
+				EE6B5AE01D83C55C00695ACF /* HomeViewController.m in Sources */,
+				EE46BC2D1D84597D00C34FE9 /* RegistrationViewController.m in Sources */,
 				EE6B5ADD1D83C55C00695ACF /* AppDelegate.m in Sources */,
 				EE6B5ADA1D83C55C00695ACF /* main.m in Sources */,
 			);
@@ -505,6 +609,7 @@
 				EE6B5B071D83C55C00695ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE6B5B081D83C55C00695ACF /* Build configuration list for PBXNativeTarget "PersonalFinanceTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +618,7 @@
 				EE6B5B0A1D83C55C00695ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE6B5B0B1D83C55C00695ACF /* Build configuration list for PBXNativeTarget "PersonalFinanceUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +627,7 @@
 				EE6B5B0D1D83C55C00695ACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
