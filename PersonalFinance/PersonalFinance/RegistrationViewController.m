@@ -7,8 +7,13 @@
 //
 
 #import "RegistrationViewController.h"
+#import "PersonalFinance-Swift.h"
 
-@interface RegistrationViewController ()
+@interface RegistrationViewController () {
+    // SRP
+    id<AccountStore> _store; // Dependency
+    id<ControllerLoader> homeLoader; // Dependency
+}
 
 @end
 
@@ -22,6 +27,19 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setStore:(id)store {
+    _store = store;
+}
+
+-(void)setControllerLoader:(id)loader {
+    homeLoader = loader;
+}
+
+- (IBAction)saveAccount:(id)sender {
+    [_store createAccount];
+    [homeLoader loadController];
 }
 
 /*

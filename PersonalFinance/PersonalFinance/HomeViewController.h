@@ -10,5 +10,8 @@
 
 @interface HomeViewController : UIViewController
 
+-(void)setRegistrationPresenter:(id)presenter;
+-(void)setDashboardLoader:(id)loader;
+
 @end
 

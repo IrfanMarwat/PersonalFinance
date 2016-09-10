@@ -10,4 +10,7 @@
 
 @interface RegistrationViewController : UIViewController
 
+-(void)setStore:(id)store;
+-(void)setControllerLoader:(id)loader;
+
 @end

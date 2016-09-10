@@ -15,6 +15,18 @@
 		EE46BC381D845A3900C34FE9 /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC371D845A3900C34FE9 /* ExpenseViewController.m */; };
 		EE46BC3B1D845A4E00C34FE9 /* IncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */; };
 		EE46BC3E1D845A6900C34FE9 /* Income.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC3D1D845A6900C34FE9 /* Income.storyboard */; };
+		EE46BC411D8472C300C34FE9 /* ControllerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC401D8472C300C34FE9 /* ControllerLoader.swift */; };
+		EE46BC431D84733600C34FE9 /* ControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC421D84733600C34FE9 /* ControllerPresenter.swift */; };
+		EE46BC451D8473C200C34FE9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC441D8473C200C34FE9 /* AlertHandler.swift */; };
+		EE46BC471D8473E100C34FE9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC461D8473E100C34FE9 /* Alert.swift */; };
+		EE46BC4B1D8474B600C34FE9 /* SimpleAlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC4A1D8474B600C34FE9 /* SimpleAlertHandler.swift */; };
+		EE46BC4D1D84750C00C34FE9 /* ToastHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC4C1D84750C00C34FE9 /* ToastHandler.swift */; };
+		EE46BC531D84756200C34FE9 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC521D84756200C34FE9 /* iToast.m */; };
+		EE46BC561D847E6A00C34FE9 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC551D847E6A00C34FE9 /* JVFloatLabeledTextField.m */; };
+		EE46BC581D84810100C34FE9 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC571D84810100C34FE9 /* RegistrationPresenter.swift */; };
+		EE46BC5A1D84816C00C34FE9 /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC591D84816C00C34FE9 /* AccountStore.swift */; };
+		EE46BC5C1D84849800C34FE9 /* RegistrationPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC5B1D84849800C34FE9 /* RegistrationPresentable.swift */; };
+		EE46BC5E1D84944D00C34FE9 /* HomeControllerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC5D1D84944D00C34FE9 /* HomeControllerLoader.swift */; };
 		EE6B5ADA1D83C55C00695ACF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5AD91D83C55C00695ACF /* main.m */; };
 		EE6B5ADD1D83C55C00695ACF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5ADC1D83C55C00695ACF /* AppDelegate.m */; };
 		EE6B5AE01D83C55C00695ACF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5ADF1D83C55C00695ACF /* HomeViewController.m */; };
@@ -56,6 +68,21 @@
 		EE46BC391D845A4E00C34FE9 /* IncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IncomeViewController.h; path = Income/IncomeViewController.h; sourceTree = "<group>"; };
 		EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IncomeViewController.m; path = Income/IncomeViewController.m; sourceTree = "<group>"; };
 		EE46BC3D1D845A6900C34FE9 /* Income.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Income.storyboard; sourceTree = "<group>"; };
+		EE46BC3F1D8472C300C34FE9 /* PersonalFinance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonalFinance-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE46BC401D8472C300C34FE9 /* ControllerLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllerLoader.swift; path = Protocols/ControllerLoader.swift; sourceTree = "<group>"; };
+		EE46BC421D84733600C34FE9 /* ControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerPresenter.swift; sourceTree = "<group>"; };
+		EE46BC441D8473C200C34FE9 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
+		EE46BC461D8473E100C34FE9 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		EE46BC4A1D8474B600C34FE9 /* SimpleAlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleAlertHandler.swift; path = "Protocol Implementations/SimpleAlertHandler.swift"; sourceTree = "<group>"; };
+		EE46BC4C1D84750C00C34FE9 /* ToastHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastHandler.swift; sourceTree = "<group>"; };
+		EE46BC511D84756200C34FE9 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		EE46BC521D84756200C34FE9 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		EE46BC541D847E6A00C34FE9 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		EE46BC551D847E6A00C34FE9 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		EE46BC571D84810100C34FE9 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		EE46BC591D84816C00C34FE9 /* AccountStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		EE46BC5B1D84849800C34FE9 /* RegistrationPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPresentable.swift; sourceTree = "<group>"; };
+		EE46BC5D1D84944D00C34FE9 /* HomeControllerLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeControllerLoader.swift; sourceTree = "<group>"; };
 		EE6B5AD51D83C55C00695ACF /* PersonalFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B5AD91D83C55C00695ACF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EE6B5ADB1D83C55C00695ACF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +167,12 @@
 		EE46BC261D8457B600C34FE9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				EE46BC3F1D8472C300C34FE9 /* PersonalFinance-Bridging-Header.h */,
+				EE46BC401D8472C300C34FE9 /* ControllerLoader.swift */,
+				EE46BC421D84733600C34FE9 /* ControllerPresenter.swift */,
+				EE46BC441D8473C200C34FE9 /* AlertHandler.swift */,
+				EE46BC461D8473E100C34FE9 /* Alert.swift */,
+				EE46BC5B1D84849800C34FE9 /* RegistrationPresentable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -147,6 +180,7 @@
 		EE46BC271D8457BD00C34FE9 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
+				EE46BC591D84816C00C34FE9 /* AccountStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -169,6 +203,56 @@
 				EE6B5ADF1D83C55C00695ACF /* HomeViewController.m */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		EE46BC481D84740500C34FE9 /* Protocol Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC4A1D8474B600C34FE9 /* SimpleAlertHandler.swift */,
+				EE46BC4C1D84750C00C34FE9 /* ToastHandler.swift */,
+				EE46BC571D84810100C34FE9 /* RegistrationPresenter.swift */,
+				EE46BC5D1D84944D00C34FE9 /* HomeControllerLoader.swift */,
+			);
+			name = "Protocol Implementations";
+			sourceTree = "<group>";
+		};
+		EE46BC491D84741A00C34FE9 /* Controllers Components */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC281D84592E00C34FE9 /* Account Registration */,
+				EE46BC2E1D84599800C34FE9 /* Home */,
+				EE46BC221D84573200C34FE9 /* Component Dashboard */,
+				EE46BC241D84579D00C34FE9 /* Component Expanse */,
+				EE46BC231D84579200C34FE9 /* Component Income */,
+			);
+			name = "Controllers Components";
+			sourceTree = "<group>";
+		};
+		EE46BC4E1D84752F00C34FE9 /* Open Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC501D84754A00C34FE9 /* JVTextField */,
+				EE46BC4F1D84754200C34FE9 /* Toast */,
+			);
+			name = "Open Sources";
+			sourceTree = "<group>";
+		};
+		EE46BC4F1D84754200C34FE9 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC511D84756200C34FE9 /* iToast.h */,
+				EE46BC521D84756200C34FE9 /* iToast.m */,
+			);
+			name = Toast;
+			sourceTree = "<group>";
+		};
+		EE46BC501D84754A00C34FE9 /* JVTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EE46BC541D847E6A00C34FE9 /* JVFloatLabeledTextField.h */,
+				EE46BC551D847E6A00C34FE9 /* JVFloatLabeledTextField.m */,
+			);
+			name = JVTextField;
 			sourceTree = "<group>";
 		};
 		EE6B5ACC1D83C55B00695ACF = {
@@ -194,14 +278,12 @@
 		EE6B5AD71D83C55C00695ACF /* PersonalFinance */ = {
 			isa = PBXGroup;
 			children = (
+				EE46BC491D84741A00C34FE9 /* Controllers Components */,
 				EE46BC271D8457BD00C34FE9 /* Stores */,
 				EE46BC261D8457B600C34FE9 /* Protocols */,
+				EE46BC481D84740500C34FE9 /* Protocol Implementations */,
 				EE46BC251D8457A800C34FE9 /* Models */,
-				EE46BC281D84592E00C34FE9 /* Account Registration */,
-				EE46BC2E1D84599800C34FE9 /* Home */,
-				EE46BC221D84573200C34FE9 /* Component Dashboard */,
-				EE46BC241D84579D00C34FE9 /* Component Expanse */,
-				EE46BC231D84579200C34FE9 /* Component Income */,
+				EE46BC4E1D84752F00C34FE9 /* Open Sources */,
 				EE6B5ADB1D83C55C00695ACF /* AppDelegate.h */,
 				EE6B5ADC1D83C55C00695ACF /* AppDelegate.m */,
 				EE6B5AE71D83C55C00695ACF /* Assets.xcassets */,
@@ -306,7 +388,6 @@
 				TargetAttributes = {
 					EE6B5AD41D83C55C00695ACF = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = W85VJR9GUS;
 					};
 					EE6B5AF01D83C55C00695ACF = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -376,13 +457,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE46BC4B1D8474B600C34FE9 /* SimpleAlertHandler.swift in Sources */,
+				EE46BC5C1D84849800C34FE9 /* RegistrationPresentable.swift in Sources */,
+				EE46BC431D84733600C34FE9 /* ControllerPresenter.swift in Sources */,
 				EE6B5AE61D83C55C00695ACF /* PersonalFinance.xcdatamodeld in Sources */,
+				EE46BC531D84756200C34FE9 /* iToast.m in Sources */,
 				EE46BC381D845A3900C34FE9 /* ExpenseViewController.m in Sources */,
+				EE46BC581D84810100C34FE9 /* RegistrationPresenter.swift in Sources */,
 				EE46BC311D8459D100C34FE9 /* DashboardViewController.m in Sources */,
 				EE46BC3B1D845A4E00C34FE9 /* IncomeViewController.m in Sources */,
 				EE6B5AE01D83C55C00695ACF /* HomeViewController.m in Sources */,
+				EE46BC471D8473E100C34FE9 /* Alert.swift in Sources */,
+				EE46BC451D8473C200C34FE9 /* AlertHandler.swift in Sources */,
+				EE46BC411D8472C300C34FE9 /* ControllerLoader.swift in Sources */,
 				EE46BC2D1D84597D00C34FE9 /* RegistrationViewController.m in Sources */,
+				EE46BC561D847E6A00C34FE9 /* JVFloatLabeledTextField.m in Sources */,
 				EE6B5ADD1D83C55C00695ACF /* AppDelegate.m in Sources */,
+				EE46BC5A1D84816C00C34FE9 /* AccountStore.swift in Sources */,
+				EE46BC5E1D84944D00C34FE9 /* HomeControllerLoader.swift in Sources */,
+				EE46BC4D1D84750C00C34FE9 /* ToastHandler.swift in Sources */,
 				EE6B5ADA1D83C55C00695ACF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,10 +617,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = PersonalFinance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.irfan.PersonalFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PersonalFinance/PersonalFinance-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -535,10 +633,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = PersonalFinance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.irfan.PersonalFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PersonalFinance/PersonalFinance-Bridging-Header.h";
 			};
 			name = Release;
 		};

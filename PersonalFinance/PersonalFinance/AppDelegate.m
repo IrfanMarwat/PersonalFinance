@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "RegistrationViewController.h"
+#import "PersonalFinance-Swift.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +17,18 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+    id<AccountStore> accountStore = [[FinancedAccountStore alloc] init];
+    id<ControllerLoader> homeLoader = [[HomeControllerLoader alloc] init];
+    
+    RegistrationViewController *viewController = [[UIStoryboard storyboardWithName:@"Registration" bundle:nil] instantiateViewControllerWithIdentifier:@"RegistrationViewController"];
+    
+    [viewController setStore:accountStore];
+    [viewController setControllerLoader:homeLoader];
+    
+    self.window.rootViewController = viewController;
+    [self.window becomeKeyWindow];
+    
     return YES;
 }
 
