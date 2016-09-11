@@ -14,7 +14,7 @@
     func deleteTransaction(transaction: Transaction)
 }
 
-class IncomeStore: TransactionStore {
+class IncomeStore:NSObject, TransactionStore {
     var privateItems = Array<Transaction>()
     var coreDataHandler: CoreDataHandler? = nil //Property Injection should be injected by external source!
 
@@ -24,10 +24,12 @@ class IncomeStore: TransactionStore {
     
     @objc func createItem(transaction: Transaction) {
         privateItems.append(transaction)
+        coreDataHandler?.createItem()
     }
     
     @objc func deleteTransaction(transaction: Transaction) {
         privateItems = privateItems.filter() { $0.transactionId != transaction.transactionId }
+        coreDataHandler?.deleteItem(transaction)
     }
     
     @objc internal var allItems: Array<Transaction> {
@@ -37,7 +39,7 @@ class IncomeStore: TransactionStore {
     }
 }
 
-class ExpenseStore: TransactionStore {
+class ExpenseStore:NSObject, TransactionStore {
     var privateItems = Array<Transaction>()
     
     @objc func createItem(transaction: Transaction) {

@@ -7,8 +7,12 @@
 //
 
 #import "TransactionViewController.h"
+#import "PersonalFinance-Swift.h"
 
-@interface TransactionViewController ()
+@interface TransactionViewController () {
+    id<TransactionStore> _store; // dependency --> Must be injected by external source
+    Transaction *_transaction; // dependency --> Must be injected by external source
+}
 
 @end
 
@@ -22,6 +26,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setTransaction:(Transaction *)transaction {
+    _transaction = transaction;
+}
+
+-(void)setTransactionStore:(id)store {
+    _store = store;
+}
+
+- (IBAction)saveTransaction:(id)sender {
+    [_store createItem:_transaction];
+    
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 /*

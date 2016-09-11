@@ -7,10 +7,21 @@
 //
 
 #import "DashboardViewController.h"
+#import "Income.h"
+#import "Expense.h"
 #import "PersonalFinance-Swift.h"
 
-@interface DashboardViewController () {
+@protocol DashboardFunctionalityProvider <NSObject>
+
+-(void)loadIncome;
+-(void)loadExpense;
+
+@end
+
+@interface DashboardViewController ()<TreeButtonsProtocol, DashboardFunctionalityProvider, ControllerPresentable> {
     id<ControllerPresenter> _transactionPresenter;
+    id<TreeFactory> _treefactory;
+    id<HomeTreeHandling> _homeTreeDelegate;
 }
 
 @end
@@ -19,7 +30,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _treefactory = [[TransactionTreeFactory alloc] initWithDelegate:self]; // Should have injected the external source ?? Voilation ??
+    [_homeTreeDelegate setupTreeHandler:_treefactory];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,8 +40,45 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setTreeFactory:(id)treeFactory {
+    _treefactory = treeFactory;
+}
+
+-(void)setHomeTreeDelegate:(id)homeTreeDelegate {
+    _homeTreeDelegate = homeTreeDelegate;
+}
+
 -(void)setTransactionPresenter:(id)controllerPresenter {
     _transactionPresenter = controllerPresenter;
+}
+
+-(void)nodeSelected:(ParentTreeButton *)sender {
+    [_homeTreeDelegate collapseTree];
+    [self loadIncome];
+    
+}
+
+-(UIViewController *)getViewController {
+    return self;
+}
+
+-(void)loadIncome {
+    id<TransactionStore> store = [[[IncomeStoreFactory alloc] init] getObject];
+    Transaction *transaction = [[Income alloc] initWithContext:[ManagedObjectContexter getManagedObjectContext]];
+    
+    _transactionPresenter = [[TransactionPresenter alloc] initWithStore:store controllerPresentable:self transaction:transaction];
+    
+    [_transactionPresenter presentController];
+    
+}
+
+-(void)loadExpense {
+    id<TransactionStore> store = [[[ExpenseStoreFactory alloc] init] getObject];
+    Transaction *transaction = [[Expense alloc] initWithContext:[ManagedObjectContexter getManagedObjectContext]];
+    
+    _transactionPresenter = [[TransactionPresenter alloc] initWithStore:store controllerPresentable:self transaction:transaction];
+    
+    [_transactionPresenter presentController];
 }
 
 /*

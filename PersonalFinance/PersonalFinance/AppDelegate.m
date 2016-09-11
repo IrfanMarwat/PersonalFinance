@@ -25,11 +25,11 @@
     
     id<AccountStore> accountStore = [[[AccountStoreFactory alloc] init] getObject];
     if (accountStore.allItems.count > 0) {
-//        HomeViewController *homeVc = (HomeViewController *)[self.window rootViewController];
-//        TreeHandler *treeHandler = [[TreeHandler alloc] initWithNodeFactory:[[TransactionTreeFactory alloc] init] view:homeVc.view];
-//        id<ControllerPresenter> transactionPresenter =
-//        id<ControllerLoader> dashboardLoader = [[DashbaordLoader alloc] initWithTransactionPresenter:nil delegateToHome:nil];
-//        id<ControllerLoader> homeLoader = [[HomeControllerLoader alloc] initWithDashboardLoader:dashboardLoader treeHandler:<#(TreeHandler * _Nonnull)#>]
+        HomeViewController *homeVc = (HomeViewController *)[self.window rootViewController];
+        id<ControllerLoader> dashboardLoader = [[DashbaordLoader alloc] initWithDelegateToHome:(id<HomeControllerLoading>)homeVc];
+        
+        [homeVc setDashboardLoader:dashboardLoader];
+        
         return YES;
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol TreeHandlerDelegate {
+@objc protocol TreeHandlerDelegate {
     func getButtonFrame() -> CGRect
 }
 

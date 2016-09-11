@@ -9,7 +9,7 @@
         <!--Transaction View Controller-->
         <scene sceneID="myy-pn-e0t">
             <objects>
-                <viewController storyboardIdentifier="ExpenseViewController" id="Uik-YA-PLy" customClass="TransactionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TransactionViewController" id="Uik-YA-PLy" customClass="TransactionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U7k-g4-Tbt"/>
                         <viewControllerLayoutGuide type="bottom" id="cjI-Mg-mCP"/>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22k-Sx-duM">
-                                <rect key="frame" x="150" y="90" width="300" height="120"/>
+                                <rect key="frame" x="150" y="30" width="300" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name(Description)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-79-3Po" customClass="JVFloatLabeledTextField">
                                         <rect key="frame" x="5" y="5" width="290" height="53"/>
@@ -48,14 +48,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-VV-xy2">
-                                <rect key="frame" x="155" y="221" width="290" height="53"/>
+                                <rect key="frame" x="155" y="161" width="290" height="53"/>
                                 <color key="backgroundColor" red="0.53614574670791626" green="0.79425358772277832" blue="0.91552621126174927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Recurrent">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34y-vc-FOq">
-                                <rect key="frame" x="150" y="307" width="300" height="180"/>
+                                <rect key="frame" x="150" y="247" width="300" height="180"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Today" borderStyle="line" placeholder="Start Month" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-Zo-YYT" customClass="JVFloatLabeledTextField">
                                         <rect key="frame" x="5" y="63" width="290" height="53"/>
@@ -93,18 +93,32 @@
                                     <constraint firstAttribute="trailing" secondItem="Ahr-Zo-YYT" secondAttribute="trailing" constant="5" id="xRL-cP-moh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-27-VFS">
+                                <rect key="frame" x="155" y="435" width="290" height="53"/>
+                                <color key="backgroundColor" red="0.53614574670000004" green="0.79425358769999999" blue="0.9155262113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveTransaction:" destination="Uik-YA-PLy" eventType="touchUpInside" id="VHm-XV-Am3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kxI-VV-xy2" firstAttribute="height" secondItem="wug-Sn-z8b" secondAttribute="height" id="9h2-Me-cDD"/>
                             <constraint firstItem="22k-Sx-duM" firstAttribute="centerX" secondItem="B2H-dD-uzm" secondAttribute="centerX" id="CuK-A6-s8e"/>
                             <constraint firstItem="kxI-VV-xy2" firstAttribute="top" secondItem="wug-Sn-z8b" secondAttribute="bottom" constant="16" id="Fnc-1e-nJ4"/>
+                            <constraint firstItem="XnC-27-VFS" firstAttribute="trailing" secondItem="DOo-YF-jYf" secondAttribute="trailing" id="HbV-bz-dNd"/>
+                            <constraint firstItem="XnC-27-VFS" firstAttribute="height" secondItem="DOo-YF-jYf" secondAttribute="height" id="IHW-WD-hni"/>
                             <constraint firstItem="34y-vc-FOq" firstAttribute="top" secondItem="kxI-VV-xy2" secondAttribute="bottom" constant="33" id="LX5-YG-60W"/>
                             <constraint firstItem="34y-vc-FOq" firstAttribute="leading" secondItem="22k-Sx-duM" secondAttribute="leading" id="Lql-UO-S0Y"/>
+                            <constraint firstItem="XnC-27-VFS" firstAttribute="leading" secondItem="DOo-YF-jYf" secondAttribute="leading" id="PaN-67-h1q"/>
                             <constraint firstItem="kxI-VV-xy2" firstAttribute="leading" secondItem="wug-Sn-z8b" secondAttribute="leading" id="SRr-Wk-Ce4"/>
-                            <constraint firstItem="22k-Sx-duM" firstAttribute="centerY" secondItem="B2H-dD-uzm" secondAttribute="centerY" multiplier="0.5" id="ShK-Qa-oov"/>
+                            <constraint firstItem="22k-Sx-duM" firstAttribute="centerY" secondItem="B2H-dD-uzm" secondAttribute="centerY" multiplier="0.3" id="ShK-Qa-oov"/>
                             <constraint firstItem="kxI-VV-xy2" firstAttribute="trailing" secondItem="wug-Sn-z8b" secondAttribute="trailing" id="WSR-iO-pGe"/>
                             <constraint firstItem="34y-vc-FOq" firstAttribute="trailing" secondItem="22k-Sx-duM" secondAttribute="trailing" id="gvs-Kd-80g"/>
+                            <constraint firstItem="XnC-27-VFS" firstAttribute="top" secondItem="DOo-YF-jYf" secondAttribute="bottom" constant="13" id="vlO-Gp-NYU"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -16,7 +16,7 @@ import CoreData
     func saveContext()
 }
 
-class CoreDataBasic:  CoreDataHandler {
+class CoreDataBasic:NSObject, CoreDataHandler {
     var entityName: String! // dependency Injection --> Must be injected through constructor
     var context: NSManagedObjectContext! // dependency Injection --> Must be injected through constructo
     

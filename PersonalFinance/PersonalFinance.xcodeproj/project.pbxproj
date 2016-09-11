@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE010B001D8577070077E430 /* BalanceDetailCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010AFF1D8577070077E430 /* BalanceDetailCollectionCell.m */; };
+		EE010B031D8577160077E430 /* DashBoardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010B021D8577160077E430 /* DashBoardCell.m */; };
+		EE010B061D8577450077E430 /* DasboardCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010B051D8577450077E430 /* DasboardCellData.m */; };
+		EE010B091D8578E70077E430 /* DashbaordDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010B081D8578E70077E430 /* DashbaordDatasource.m */; };
 		EE05936C1D850F4A0037BC1B /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593551D850F4A0037BC1B /* Account+CoreDataProperties.m */; };
 		EE05936D1D850F4A0037BC1B /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593571D850F4A0037BC1B /* Account.m */; };
 		EE05936E1D850F4A0037BC1B /* Amount+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593591D850F4A0037BC1B /* Amount+CoreDataProperties.m */; };
@@ -31,6 +35,7 @@
 		EE0593921D8549320037BC1B /* DashbaordLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0593911D8549320037BC1B /* DashbaordLoader.swift */; };
 		EE0593941D854A990037BC1B /* HomeControllerLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0593931D854A990037BC1B /* HomeControllerLoading.swift */; };
 		EE0593961D8550FB0037BC1B /* TransactionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0593951D8550FB0037BC1B /* TransactionPresenter.swift */; };
+		EE0593981D8563DC0037BC1B /* HomeTreeHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0593971D8563DC0037BC1B /* HomeTreeHandling.swift */; };
 		EE46BC2A1D84595700C34FE9 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC291D84595700C34FE9 /* Registration.storyboard */; };
 		EE46BC2D1D84597D00C34FE9 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC2C1D84597D00C34FE9 /* RegistrationViewController.m */; };
 		EE46BC311D8459D100C34FE9 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC301D8459D100C34FE9 /* DashboardViewController.m */; };
@@ -78,6 +83,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE010AFE1D8577070077E430 /* BalanceDetailCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BalanceDetailCollectionCell.h; path = Dashboard/BalanceDetailCollectionCell.h; sourceTree = "<group>"; };
+		EE010AFF1D8577070077E430 /* BalanceDetailCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BalanceDetailCollectionCell.m; path = Dashboard/BalanceDetailCollectionCell.m; sourceTree = "<group>"; };
+		EE010B011D8577160077E430 /* DashBoardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardCell.h; sourceTree = "<group>"; };
+		EE010B021D8577160077E430 /* DashBoardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardCell.m; sourceTree = "<group>"; };
+		EE010B041D8577450077E430 /* DasboardCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DasboardCellData.h; sourceTree = "<group>"; };
+		EE010B051D8577450077E430 /* DasboardCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DasboardCellData.m; sourceTree = "<group>"; };
+		EE010B071D8578E70077E430 /* DashbaordDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashbaordDatasource.h; sourceTree = "<group>"; };
+		EE010B081D8578E70077E430 /* DashbaordDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashbaordDatasource.m; sourceTree = "<group>"; };
 		EE0593541D850F4A0037BC1B /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Account+CoreDataProperties.h"; path = "Coredata/Account+CoreDataProperties.h"; sourceTree = "<group>"; };
 		EE0593551D850F4A0037BC1B /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Account+CoreDataProperties.m"; path = "Coredata/Account+CoreDataProperties.m"; sourceTree = "<group>"; };
 		EE0593561D850F4A0037BC1B /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Coredata/Account.h; sourceTree = "<group>"; };
@@ -115,6 +128,7 @@
 		EE0593911D8549320037BC1B /* DashbaordLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashbaordLoader.swift; sourceTree = "<group>"; };
 		EE0593931D854A990037BC1B /* HomeControllerLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeControllerLoading.swift; sourceTree = "<group>"; };
 		EE0593951D8550FB0037BC1B /* TransactionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionPresenter.swift; sourceTree = "<group>"; };
+		EE0593971D8563DC0037BC1B /* HomeTreeHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTreeHandling.swift; sourceTree = "<group>"; };
 		EE46BC291D84595700C34FE9 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		EE46BC2B1D84597D00C34FE9 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		EE46BC2C1D84597D00C34FE9 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
@@ -183,6 +197,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE010AFD1D8576D50077E430 /* BalanceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EE010B041D8577450077E430 /* DasboardCellData.h */,
+				EE010B051D8577450077E430 /* DasboardCellData.m */,
+				EE010B011D8577160077E430 /* DashBoardCell.h */,
+				EE010B021D8577160077E430 /* DashBoardCell.m */,
+				EE010AFE1D8577070077E430 /* BalanceDetailCollectionCell.h */,
+				EE010AFF1D8577070077E430 /* BalanceDetailCollectionCell.m */,
+				EE010B071D8578E70077E430 /* DashbaordDatasource.h */,
+				EE010B081D8578E70077E430 /* DashbaordDatasource.m */,
+			);
+			name = BalanceDetail;
+			sourceTree = "<group>";
+		};
 		EE0593531D850F2B0037BC1B /* Core data */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +273,7 @@
 		EE46BC221D84573200C34FE9 /* Component Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				EE010AFD1D8576D50077E430 /* BalanceDetail */,
 				EE46BC2F1D8459D100C34FE9 /* DashboardViewController.h */,
 				EE46BC301D8459D100C34FE9 /* DashboardViewController.m */,
 				EE46BC321D8459E500C34FE9 /* Dashboard.storyboard */,
@@ -281,6 +311,7 @@
 				EE05937D1D8515590037BC1B /* CoreDataHandler.swift */,
 				EE05938B1D853CD40037BC1B /* TreeFactory.swift */,
 				EE0593931D854A990037BC1B /* HomeControllerLoading.swift */,
+				EE0593971D8563DC0037BC1B /* HomeTreeHandling.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -573,6 +604,7 @@
 				EE0593791D85110E0037BC1B /* TransactionStore.swift in Sources */,
 				EE46BC4B1D8474B600C34FE9 /* SimpleAlertHandler.swift in Sources */,
 				EE46BC5C1D84849800C34FE9 /* ControllerPresentable.swift in Sources */,
+				EE010B091D8578E70077E430 /* DashbaordDatasource.m in Sources */,
 				EE46BC431D84733600C34FE9 /* ControllerPresenter.swift in Sources */,
 				EE6B5AE61D83C55C00695ACF /* PersonalFinance.xcdatamodeld in Sources */,
 				EE46BC531D84756200C34FE9 /* iToast.m in Sources */,
@@ -591,6 +623,8 @@
 				EE0593921D8549320037BC1B /* DashbaordLoader.swift in Sources */,
 				EE05938E1D853D250037BC1B /* TransactionTreeFactory.swift in Sources */,
 				EE0593731D850F4A0037BC1B /* Transaction.m in Sources */,
+				EE010B001D8577070077E430 /* BalanceDetailCollectionCell.m in Sources */,
+				EE010B031D8577160077E430 /* DashBoardCell.m in Sources */,
 				EE05938A1D853C8E0037BC1B /* TreeHandler.swift in Sources */,
 				EE46BC471D8473E100C34FE9 /* Alert.swift in Sources */,
 				EE0593811D851A860037BC1B /* ManagedObjectContexter.swift in Sources */,
@@ -605,10 +639,12 @@
 				EE6B5ADD1D83C55C00695ACF /* AppDelegate.m in Sources */,
 				EE46BC5A1D84816C00C34FE9 /* AccountStore.swift in Sources */,
 				EE46BC5E1D84944D00C34FE9 /* HomeControllerLoader.swift in Sources */,
+				EE0593981D8563DC0037BC1B /* HomeTreeHandling.swift in Sources */,
 				EE0593761D850F4A0037BC1B /* Expense+CoreDataProperties.m in Sources */,
 				EE46BC4D1D84750C00C34FE9 /* ToastHandler.swift in Sources */,
 				EE6B5ADA1D83C55C00695ACF /* main.m in Sources */,
 				EE0593901D853D780037BC1B /* SimplePlusButton.swift in Sources */,
+				EE010B061D8577450077E430 /* DasboardCellData.m in Sources */,
 				EE0593771D850F4A0037BC1B /* Expense.m in Sources */,
 				EE0593701D850F4A0037BC1B /* Frequency+CoreDataProperties.m in Sources */,
 				EE0593751D850F4A0037BC1B /* Income.m in Sources */,

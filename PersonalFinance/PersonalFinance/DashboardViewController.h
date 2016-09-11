@@ -10,6 +10,8 @@
 
 @interface DashboardViewController : UIViewController
 
+-(void)setHomeTreeDelegate:(id)homeTreeDelegate;
 -(void)setTransactionPresenter:(id)controllerPresenter;
+-(void)setTreeFactory:(id)treeFactory;
 
 @end

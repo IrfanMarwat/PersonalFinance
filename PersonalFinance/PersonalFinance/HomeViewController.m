@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "PersonalFinance-Swift.h"
 
-@interface HomeViewController () <ControllerPresentable, HomeControllerLoading> {
+@interface HomeViewController () <ControllerPresentable, HomeControllerLoading, TreeHandlerDelegate, HomeTreeHandling> {
     // Voilation of SRP ??? NO
     __weak IBOutlet UIButton *buttonPlus;
     UINavigationController *_navigationController;
@@ -38,6 +38,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(CGRect)getButtonFrame {
+    return buttonPlus.frame;
 }
 
 -(void)setViewController:(UIViewController *)vc {
@@ -78,6 +82,13 @@
 -(void)collapseTree {
     [_treeHandler collapseTree];
     buttonPlus.selected = false;
+}
+
+// HomeTreeHandling
+
+-(void)setupTreeHandler:(id<TreeFactory>)factory {
+    _treeHandler = [[TreeHandler alloc] initWithNodeFactory:factory view:self.view];
+    _treeHandler.delegate = self;
 }
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Transaction;
 
 @interface TransactionViewController : UIViewController
+
+-(void)setTransactionStore:(id)store;
+-(void)setTransaction:(Transaction *)transaction;
 
 @end

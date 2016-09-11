@@ -6,27 +6,23 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
-class TransactionPresenter: ControllerPresenter {
+class TransactionPresenter:NSObject, ControllerPresenter {
+    var store: TransactionStore? // dependency --> Constructor Injection
+    var controllerPresentable: ControllerPresentable? = nil  // Constructor Injection
+    var transaction: Transaction? = nil // Dependency
     
-    init(store: AccountStore, delegate: ControllerPresentable) {
+    init(store: TransactionStore?, controllerPresentable: ControllerPresentable, transaction: Transaction) {
         self.store = store
-        self.controllerPresentable = delegate
+        self.controllerPresentable = controllerPresentable
     }
-
-    var store: AccountStore? = nil // dependency
-    var controllerPresentable: ControllerPresentable? = nil  // dependency
     
     @objc func presentController() {
         let vc = UIStoryboard(name: "Transaction", bundle: nil).instantiateViewControllerWithIdentifier("TransactionViewController") as! TransactionViewController
-        
+        vc.setTransactionStore(store)
+        vc.setTransaction(transaction)
         controllerPresentable?.getViewController().presentViewController(vc, animated: true, completion: nil)
         
         vc.view.frame = UIScreen.mainScreen().bounds
         vc.view.backgroundColor = UIColor.whiteColor()
-    }
-    
-    static func getTransactionPresenter(delegate: ControllerPresentable) -> RegistrationPresenter {
-        let coreDatahandler = CoreDataHandlerFactory(entityName: "Account", context: ManagedObjectContexter.getManagedObjectContext()) as! CoreDataHandler
-        return RegistrationPresenter(store: FinancedAccountStore(coreDataHandler: coreDatahandler), delegate: delegate)
     }
 }

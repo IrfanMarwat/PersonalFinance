@@ -39,3 +39,19 @@ class CoreDataHandlerFactory: ObjectFacotory {
         return CoreDataBasic(entity: entityName, context: context)
     }
 }
+
+class IncomeStoreFactory:NSObject, ObjectFacotory {
+    
+    @objc func getObject() -> AnyObject {
+        let coreDataHandler = CoreDataHandlerFactory(entityName: "Income", context: ManagedObjectContexter.getManagedObjectContext()).getObject() as! CoreDataHandler
+        return IncomeStore(coreDataHandler: coreDataHandler)
+    }
+}
+
+class ExpenseStoreFactory:NSObject, ObjectFacotory {
+    
+    @objc func getObject() -> AnyObject {
+        let coreDataHandler = CoreDataHandlerFactory(entityName: "Expense", context: ManagedObjectContexter.getManagedObjectContext()).getObject() as! CoreDataHandler
+        return IncomeStore(coreDataHandler: coreDataHandler)
+    }
+}

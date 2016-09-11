@@ -14,4 +14,9 @@
 
 // Insert code here to add functionality to your managed object subclass
 
+-(instancetype)initWithContext:(NSManagedObjectContext *)context {
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Income" inManagedObjectContext:context];
+    return [self initWithEntity:entityDescription insertIntoManagedObjectContext:context];
+}
+
 @end
