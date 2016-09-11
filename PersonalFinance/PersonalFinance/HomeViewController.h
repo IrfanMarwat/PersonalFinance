@@ -10,8 +10,8 @@
 
 @interface HomeViewController : UIViewController
 
--(void)setRegistrationPresenter:(id)presenter;
 -(void)setDashboardLoader:(id)loader;
+-(void)setTreeHandler:(id)treeHandler;
 
 @end
 

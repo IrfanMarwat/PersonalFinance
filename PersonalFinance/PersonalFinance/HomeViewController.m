@@ -9,10 +9,13 @@
 #import "HomeViewController.h"
 #import "PersonalFinance-Swift.h"
 
-@interface HomeViewController () <RegistrationPresentable> {
+@interface HomeViewController () <ControllerPresentable, HomeControllerLoading> {
     // Voilation of SRP ??? NO
+    __weak IBOutlet UIButton *buttonPlus;
+    UINavigationController *_navigationController;
     id<ControllerPresenter> registrationPresenter; //dependency: must be injected by external source --> Property Injection
     id<ControllerLoader> dashboardLoader; //dependency: must be injected by external source --> Property Injection
+    TreeHandler *_treeHandler; // dependency
 }
 
 @end
@@ -22,7 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view, typically from a nib.
+    _navigationController = self.childViewControllers.firstObject;
+    [dashboardLoader loadController];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -36,16 +40,44 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setRegistrationPresenter:(id)presenter {
-    registrationPresenter = presenter;
+-(void)setViewController:(UIViewController *)vc {
+    [_navigationController setViewControllers:@[vc] animated:true];
+}
+
+-(void)setHeaderTitle:(NSString *)title {
+    
 }
 
 -(void)setDashboardLoader:(id)loader {
     dashboardLoader = loader;
 }
 
+-(void)setTreeHandler:(id)treeHandler {
+    _treeHandler = treeHandler;
+}
+
 -(UIViewController *)getViewController {
     return self;
+}
+
+#pragma-mark - Tree Button
+
+- (IBAction)plusButtonPressed:(id)sender {
+    if (buttonPlus.selected == false) {
+        [self expandTree];
+    } else {
+        [self collapseTree];
+    }
+}
+
+-(void)expandTree {
+    [_treeHandler expandTree];
+    buttonPlus.selected = true;
+}
+
+-(void)collapseTree {
+    [_treeHandler collapseTree];
+    buttonPlus.selected = false;
 }
 
 @end

@@ -8,9 +8,9 @@
 
 class RegistrationPresenter:NSObject, ControllerPresenter {
     var store: AccountStore? = nil // dependency
-    var registrationPresentable: RegistrationPresentable? = nil  // dependency
+    var registrationPresentable: ControllerPresentable? = nil  // dependency
     
-    init(store: AccountStore, delegate: RegistrationPresentable) {
+    init(store: AccountStore, delegate: ControllerPresentable) {
         self.store = store
         self.registrationPresentable = delegate
     }
@@ -25,7 +25,7 @@ class RegistrationPresenter:NSObject, ControllerPresenter {
         vc.view.backgroundColor = UIColor.whiteColor()
     }
     
-    static func getRegistrationPresenter(delegate: RegistrationPresentable) -> RegistrationPresenter {
+    static func getRegistrationPresenter(delegate: ControllerPresentable) -> RegistrationPresenter {
         let coreDatahandler = CoreDataHandlerFactory(entityName: "Account", context: ManagedObjectContexter.getManagedObjectContext()) as! CoreDataHandler
         return RegistrationPresenter(store: FinancedAccountStore(coreDataHandler: coreDatahandler), delegate: delegate)
     }

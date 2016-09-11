@@ -10,4 +10,6 @@
 
 @interface DashboardViewController : UIViewController
 
+-(void)setTransactionPresenter:(id)controllerPresenter;
+
 @end

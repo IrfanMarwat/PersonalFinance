@@ -6,6 +6,6 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
-@objc protocol RegistrationPresentable {
+@objc protocol ControllerPresentable {
     func getViewController() -> UIViewController
 }

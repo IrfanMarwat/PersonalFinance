@@ -7,8 +7,11 @@
 //
 
 #import "DashboardViewController.h"
+#import "PersonalFinance-Swift.h"
 
-@interface DashboardViewController ()
+@interface DashboardViewController () {
+    id<ControllerPresenter> _transactionPresenter;
+}
 
 @end
 
@@ -22,6 +25,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)setTransactionPresenter:(id)controllerPresenter {
+    _transactionPresenter = controllerPresenter;
 }
 
 /*
