@@ -7,11 +7,11 @@
 //
 
 #import "DashBoardCell.h"
-#import "DasboardCellData.h"
+#import "DashboardCellData.h"
 
 @implementation DashBoardCell
 
--(void)configureCellWithDependency:(DasboardCellData *)cellData {
+-(void)configureCellWithDependency:(DashboardCellData *)cellData {
     [[[NSException alloc] initWithName:@"Dashboard Cell" reason:@"Must implement this method in sub classes" userInfo:nil] raise];
 }
 

@@ -24,16 +24,17 @@
     // Some starting dependency Injections, In real project these must be injected by third party frameworks, like typoon etc
     
     id<AccountStore> accountStore = [[[AccountStoreFactory alloc] init] getObject];
+
     if (accountStore.allItems.count > 0) {
         HomeViewController *homeVc = (HomeViewController *)[self.window rootViewController];
         id<ControllerLoader> dashboardLoader = [[DashbaordLoader alloc] initWithDelegateToHome:(id<HomeControllerLoading>)homeVc];
-        
         [homeVc setDashboardLoader:dashboardLoader];
         
         return YES;
     }
     
     Account *account = [[Account alloc] initWithContext:[ManagedObjectContexter getManagedObjectContext]];
+    
     id<ControllerLoader> homeLoader = [[HomeControllerLoader alloc] init];
     
     RegistrationViewController *viewController = [[UIStoryboard storyboardWithName:@"Registration" bundle:nil] instantiateViewControllerWithIdentifier:@"RegistrationViewController"];

@@ -1,5 +1,5 @@
 //
-//  DashbaordDatasource.h
+//  DasboardCellData.h
 //  PersonalFinance
 //
 //  Created by Irfan on 9/11/16.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DashbaordDatasource : NSObject
+@interface DashboardCellData : NSObject
 
 @end

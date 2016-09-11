@@ -11,7 +11,6 @@
 @interface HomeViewController : UIViewController
 
 -(void)setDashboardLoader:(id)loader;
--(void)setTreeHandler:(id)treeHandler;
 
 @end
 

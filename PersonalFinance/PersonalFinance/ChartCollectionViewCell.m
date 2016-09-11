@@ -1,15 +1,14 @@
 //
-//  BalanceDetailCollectionCell.m
+//  ChartCollectionViewCell.m
 //  PersonalFinance
 //
 //  Created by Irfan on 9/11/16.
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
-#import "BalanceDetailCollectionCell.h"
-#import "DashboardCellData.h"
+#import "ChartCollectionViewCell.h"
 
-@implementation BalanceDetailCollectionCell
+@implementation ChartCollectionViewCell
 
 -(void)configureCellWithDependency:(DashboardCellData *)cellData {
     

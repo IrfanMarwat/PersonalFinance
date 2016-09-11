@@ -12,16 +12,10 @@ class HomeControllerLoader:NSObject, ControllerLoader {
     var dashbaordLoader: ControllerLoader? = nil
     var treeHandler: TreeHandler? = nil
     
-    init(dashboardLoader: ControllerLoader, treeHandler: TreeHandler) {
-        self.dashbaordLoader = dashboardLoader
-        self.treeHandler = treeHandler
-    }
-    
     @objc func loadController() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
-        
+        dashbaordLoader = DashbaordLoader(delegateToHome:vc as? HomeControllerLoading)
         vc.setDashboardLoader(dashbaordLoader)
-        vc.setTreeHandler(treeHandler)
         
         let window : UIWindow = UIApplication.sharedApplication().keyWindow!
         

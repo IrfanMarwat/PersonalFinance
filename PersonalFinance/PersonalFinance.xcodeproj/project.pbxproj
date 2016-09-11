@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE010B001D8577070077E430 /* BalanceDetailCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010AFF1D8577070077E430 /* BalanceDetailCollectionCell.m */; };
 		EE010B031D8577160077E430 /* DashBoardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010B021D8577160077E430 /* DashBoardCell.m */; };
-		EE010B061D8577450077E430 /* DasboardCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010B051D8577450077E430 /* DasboardCellData.m */; };
-		EE010B091D8578E70077E430 /* DashbaordDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010B081D8578E70077E430 /* DashbaordDatasource.m */; };
+		EE010B061D8577450077E430 /* DashboardCellData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE010B051D8577450077E430 /* DashboardCellData.m */; };
 		EE05936C1D850F4A0037BC1B /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593551D850F4A0037BC1B /* Account+CoreDataProperties.m */; };
 		EE05936D1D850F4A0037BC1B /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593571D850F4A0037BC1B /* Account.m */; };
 		EE05936E1D850F4A0037BC1B /* Amount+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593591D850F4A0037BC1B /* Amount+CoreDataProperties.m */; };
@@ -63,6 +62,9 @@
 		EE6B5AEB1D83C55C00695ACF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE6B5AE91D83C55C00695ACF /* LaunchScreen.storyboard */; };
 		EE6B5AF61D83C55C00695ACF /* PersonalFinanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5AF51D83C55C00695ACF /* PersonalFinanceTests.m */; };
 		EE6B5B011D83C55C00695ACF /* PersonalFinanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6B5B001D83C55C00695ACF /* PersonalFinanceUITests.m */; };
+		EEFF83691D858570006CF4A1 /* DashboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF83681D858570006CF4A1 /* DashboardStore.swift */; };
+		EEFF836C1D858745006CF4A1 /* DashboardDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF836B1D858745006CF4A1 /* DashboardDatasource.m */; };
+		EEFF83701D859251006CF4A1 /* ChartCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFF836F1D859251006CF4A1 /* ChartCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +89,8 @@
 		EE010AFF1D8577070077E430 /* BalanceDetailCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BalanceDetailCollectionCell.m; path = Dashboard/BalanceDetailCollectionCell.m; sourceTree = "<group>"; };
 		EE010B011D8577160077E430 /* DashBoardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardCell.h; sourceTree = "<group>"; };
 		EE010B021D8577160077E430 /* DashBoardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardCell.m; sourceTree = "<group>"; };
-		EE010B041D8577450077E430 /* DasboardCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DasboardCellData.h; sourceTree = "<group>"; };
-		EE010B051D8577450077E430 /* DasboardCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DasboardCellData.m; sourceTree = "<group>"; };
-		EE010B071D8578E70077E430 /* DashbaordDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashbaordDatasource.h; sourceTree = "<group>"; };
-		EE010B081D8578E70077E430 /* DashbaordDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashbaordDatasource.m; sourceTree = "<group>"; };
+		EE010B041D8577450077E430 /* DashboardCellData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardCellData.h; sourceTree = "<group>"; };
+		EE010B051D8577450077E430 /* DashboardCellData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardCellData.m; sourceTree = "<group>"; };
 		EE0593541D850F4A0037BC1B /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Account+CoreDataProperties.h"; path = "Coredata/Account+CoreDataProperties.h"; sourceTree = "<group>"; };
 		EE0593551D850F4A0037BC1B /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Account+CoreDataProperties.m"; path = "Coredata/Account+CoreDataProperties.m"; sourceTree = "<group>"; };
 		EE0593561D850F4A0037BC1B /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Coredata/Account.h; sourceTree = "<group>"; };
@@ -170,6 +170,11 @@
 		EE6B5AFC1D83C55C00695ACF /* PersonalFinanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalFinanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE6B5B001D83C55C00695ACF /* PersonalFinanceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalFinanceUITests.m; sourceTree = "<group>"; };
 		EE6B5B021D83C55C00695ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEFF83681D858570006CF4A1 /* DashboardStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardStore.swift; sourceTree = "<group>"; };
+		EEFF836A1D858745006CF4A1 /* DashboardDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardDatasource.h; sourceTree = "<group>"; };
+		EEFF836B1D858745006CF4A1 /* DashboardDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardDatasource.m; sourceTree = "<group>"; };
+		EEFF836E1D859251006CF4A1 /* ChartCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartCollectionViewCell.h; sourceTree = "<group>"; };
+		EEFF836F1D859251006CF4A1 /* ChartCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,14 +205,13 @@
 		EE010AFD1D8576D50077E430 /* BalanceDetail */ = {
 			isa = PBXGroup;
 			children = (
-				EE010B041D8577450077E430 /* DasboardCellData.h */,
-				EE010B051D8577450077E430 /* DasboardCellData.m */,
+				EE010B041D8577450077E430 /* DashboardCellData.h */,
+				EE010B051D8577450077E430 /* DashboardCellData.m */,
 				EE010B011D8577160077E430 /* DashBoardCell.h */,
 				EE010B021D8577160077E430 /* DashBoardCell.m */,
 				EE010AFE1D8577070077E430 /* BalanceDetailCollectionCell.h */,
 				EE010AFF1D8577070077E430 /* BalanceDetailCollectionCell.m */,
-				EE010B071D8578E70077E430 /* DashbaordDatasource.h */,
-				EE010B081D8578E70077E430 /* DashbaordDatasource.m */,
+				EEFF83681D858570006CF4A1 /* DashboardStore.swift */,
 			);
 			name = BalanceDetail;
 			sourceTree = "<group>";
@@ -273,10 +277,13 @@
 		EE46BC221D84573200C34FE9 /* Component Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				EEFF836D1D859230006CF4A1 /* ChartCell */,
 				EE010AFD1D8576D50077E430 /* BalanceDetail */,
 				EE46BC2F1D8459D100C34FE9 /* DashboardViewController.h */,
 				EE46BC301D8459D100C34FE9 /* DashboardViewController.m */,
 				EE46BC321D8459E500C34FE9 /* Dashboard.storyboard */,
+				EEFF836A1D858745006CF4A1 /* DashboardDatasource.h */,
+				EEFF836B1D858745006CF4A1 /* DashboardDatasource.m */,
 			);
 			name = "Component Dashboard";
 			sourceTree = "<group>";
@@ -466,6 +473,15 @@
 			path = PersonalFinanceUITests;
 			sourceTree = "<group>";
 		};
+		EEFF836D1D859230006CF4A1 /* ChartCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF836E1D859251006CF4A1 /* ChartCollectionViewCell.h */,
+				EEFF836F1D859251006CF4A1 /* ChartCollectionViewCell.m */,
+			);
+			name = ChartCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -604,13 +620,13 @@
 				EE0593791D85110E0037BC1B /* TransactionStore.swift in Sources */,
 				EE46BC4B1D8474B600C34FE9 /* SimpleAlertHandler.swift in Sources */,
 				EE46BC5C1D84849800C34FE9 /* ControllerPresentable.swift in Sources */,
-				EE010B091D8578E70077E430 /* DashbaordDatasource.m in Sources */,
 				EE46BC431D84733600C34FE9 /* ControllerPresenter.swift in Sources */,
 				EE6B5AE61D83C55C00695ACF /* PersonalFinance.xcdatamodeld in Sources */,
 				EE46BC531D84756200C34FE9 /* iToast.m in Sources */,
 				EE05938C1D853CD40037BC1B /* TreeFactory.swift in Sources */,
 				EE46BC381D845A3900C34FE9 /* TransactionViewController.m in Sources */,
 				EE0593881D853A5E0037BC1B /* ParentTreeButton.m in Sources */,
+				EEFF83701D859251006CF4A1 /* ChartCollectionViewCell.m in Sources */,
 				EE46BC581D84810100C34FE9 /* RegistrationPresenter.swift in Sources */,
 				EE05936C1D850F4A0037BC1B /* Account+CoreDataProperties.m in Sources */,
 				EE0593961D8550FB0037BC1B /* TransactionPresenter.swift in Sources */,
@@ -626,6 +642,7 @@
 				EE010B001D8577070077E430 /* BalanceDetailCollectionCell.m in Sources */,
 				EE010B031D8577160077E430 /* DashBoardCell.m in Sources */,
 				EE05938A1D853C8E0037BC1B /* TreeHandler.swift in Sources */,
+				EEFF83691D858570006CF4A1 /* DashboardStore.swift in Sources */,
 				EE46BC471D8473E100C34FE9 /* Alert.swift in Sources */,
 				EE0593811D851A860037BC1B /* ManagedObjectContexter.swift in Sources */,
 				EE0593741D850F4A0037BC1B /* Income+CoreDataProperties.m in Sources */,
@@ -642,9 +659,10 @@
 				EE0593981D8563DC0037BC1B /* HomeTreeHandling.swift in Sources */,
 				EE0593761D850F4A0037BC1B /* Expense+CoreDataProperties.m in Sources */,
 				EE46BC4D1D84750C00C34FE9 /* ToastHandler.swift in Sources */,
+				EEFF836C1D858745006CF4A1 /* DashboardDatasource.m in Sources */,
 				EE6B5ADA1D83C55C00695ACF /* main.m in Sources */,
 				EE0593901D853D780037BC1B /* SimplePlusButton.swift in Sources */,
-				EE010B061D8577450077E430 /* DasboardCellData.m in Sources */,
+				EE010B061D8577450077E430 /* DashboardCellData.m in Sources */,
 				EE0593771D850F4A0037BC1B /* Expense.m in Sources */,
 				EE0593701D850F4A0037BC1B /* Frequency+CoreDataProperties.m in Sources */,
 				EE0593751D850F4A0037BC1B /* Income.m in Sources */,

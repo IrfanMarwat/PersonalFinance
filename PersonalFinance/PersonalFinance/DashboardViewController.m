@@ -9,6 +9,7 @@
 #import "DashboardViewController.h"
 #import "Income.h"
 #import "Expense.h"
+#import "DashboardDatasource.h"
 #import "PersonalFinance-Swift.h"
 
 @protocol DashboardFunctionalityProvider <NSObject>
@@ -19,10 +20,14 @@
 @end
 
 @interface DashboardViewController ()<TreeButtonsProtocol, DashboardFunctionalityProvider, ControllerPresentable> {
-    id<ControllerPresenter> _transactionPresenter;
-    id<TreeFactory> _treefactory;
+    // SRP
+    id<ControllerPresenter> _transactionPresenter; // dependency
+    id<TreeFactory> _treefactory; // dependency
     id<HomeTreeHandling> _homeTreeDelegate;
+    DashboardDatasource *datasource;
+    id<DashboardStore> _store;
 }
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -33,6 +38,17 @@
     
     _treefactory = [[TransactionTreeFactory alloc] initWithDelegate:self]; // Should have injected the external source ?? Voilation ??
     [_homeTreeDelegate setupTreeHandler:_treefactory];
+        
+    [self setupDatasource];
+}
+
+-(void)setupDatasource {
+    _store = [[LocalDashboardStore alloc] init];
+    [_store createItem];
+    [_store createItem];
+    datasource = [[DashboardDatasource alloc] initWithStore:_store];
+    _collectionView.dataSource = datasource;
+    _collectionView.delegate = datasource;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,15 +96,5 @@
     
     [_transactionPresenter presentController];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
