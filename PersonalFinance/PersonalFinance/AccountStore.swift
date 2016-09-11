@@ -7,13 +7,24 @@
 //
 
 @objc protocol AccountStore {
-//    var account: Account{get}
-    func createAccount()
+    var allItems: Array<Account>{get}
+    func createAccount(account: Account)
 }
 
 class FinancedAccountStore:NSObject, AccountStore {
-//    var account: Account? = nil
-    @objc func createAccount() {
-        
+    var _coreDataHandler: CoreDataHandler? = nil
+    
+    init(coreDataHandler: CoreDataHandler) {
+        _coreDataHandler = coreDataHandler
+    }
+    
+    @objc func createAccount(account: Account) {
+        _coreDataHandler?.createItem()
+    }
+    
+    @objc internal var allItems: [Account] {
+        get {
+            return _coreDataHandler?.fetchItems() as? [Account] ?? Array()
+        }
     }
 }

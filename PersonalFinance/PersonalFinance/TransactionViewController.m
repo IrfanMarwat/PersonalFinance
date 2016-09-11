@@ -6,13 +6,13 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
-#import "ExpenseViewController.h"
+#import "TransactionViewController.h"
 
-@interface ExpenseViewController ()
+@interface TransactionViewController ()
 
 @end
 
-@implementation ExpenseViewController
+@implementation TransactionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

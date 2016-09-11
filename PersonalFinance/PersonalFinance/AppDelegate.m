@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "RegistrationViewController.h"
 #import "PersonalFinance-Swift.h"
+#import "Account+CoreDataProperties.h"
+#import "Account.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +19,22 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    id<AccountStore> accountStore = [[FinancedAccountStore alloc] init];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // Some starting dependency Injections, In real project these must be injected by third party frameworks, like typoon etc
+    
+    id<AccountStore> accountStore = [[[AccountStoreFactory alloc] init] getObject];
+    
+    if (accountStore.allItems.count > 0) {
+        return YES;
+    }
+    
+    Account *account = [[Account alloc] initWithContext:[ManagedObjectContexter getManagedObjectContext]];
     id<ControllerLoader> homeLoader = [[HomeControllerLoader alloc] init];
     
     RegistrationViewController *viewController = [[UIStoryboard storyboardWithName:@"Registration" bundle:nil] instantiateViewControllerWithIdentifier:@"RegistrationViewController"];
     
+    [viewController setAccount:account];
     [viewController setStore:accountStore];
     [viewController setControllerLoader:homeLoader];
     

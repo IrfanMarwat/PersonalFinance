@@ -26,6 +26,7 @@ class RegistrationPresenter:NSObject, ControllerPresenter {
     }
     
     static func getRegistrationPresenter(delegate: RegistrationPresentable) -> RegistrationPresenter {
-        return RegistrationPresenter(store: FinancedAccountStore(), delegate: delegate)
+        let coreDatahandler = CoreDataHandlerFactory(entityName: "Account", context: ManagedObjectContexter.getManagedObjectContext()) as! CoreDataHandler
+        return RegistrationPresenter(store: FinancedAccountStore(coreDataHandler: coreDatahandler), delegate: delegate)
     }
 }

@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE05936C1D850F4A0037BC1B /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593551D850F4A0037BC1B /* Account+CoreDataProperties.m */; };
+		EE05936D1D850F4A0037BC1B /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593571D850F4A0037BC1B /* Account.m */; };
+		EE05936E1D850F4A0037BC1B /* Amount+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593591D850F4A0037BC1B /* Amount+CoreDataProperties.m */; };
+		EE05936F1D850F4A0037BC1B /* Amount.m in Sources */ = {isa = PBXBuildFile; fileRef = EE05935B1D850F4A0037BC1B /* Amount.m */; };
+		EE0593701D850F4A0037BC1B /* Frequency+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE05935D1D850F4A0037BC1B /* Frequency+CoreDataProperties.m */; };
+		EE0593711D850F4A0037BC1B /* Frequency.m in Sources */ = {isa = PBXBuildFile; fileRef = EE05935F1D850F4A0037BC1B /* Frequency.m */; };
+		EE0593731D850F4A0037BC1B /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593631D850F4A0037BC1B /* Transaction.m */; };
+		EE0593741D850F4A0037BC1B /* Income+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593651D850F4A0037BC1B /* Income+CoreDataProperties.m */; };
+		EE0593751D850F4A0037BC1B /* Income.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593671D850F4A0037BC1B /* Income.m */; };
+		EE0593761D850F4A0037BC1B /* Expense+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE0593691D850F4A0037BC1B /* Expense+CoreDataProperties.m */; };
+		EE0593771D850F4A0037BC1B /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = EE05936B1D850F4A0037BC1B /* Expense.m */; };
+		EE0593791D85110E0037BC1B /* TransactionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0593781D85110E0037BC1B /* TransactionStore.swift */; };
+		EE05937C1D85149D0037BC1B /* Transaction+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = EE05937B1D85149D0037BC1B /* Transaction+CoreDataProperties.m */; };
+		EE05937E1D8515590037BC1B /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE05937D1D8515590037BC1B /* CoreDataHandler.swift */; };
+		EE0593811D851A860037BC1B /* ManagedObjectContexter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0593801D851A860037BC1B /* ManagedObjectContexter.swift */; };
+		EE0593841D851E160037BC1B /* ObjectFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0593831D851E160037BC1B /* ObjectFactory.swift */; };
 		EE46BC2A1D84595700C34FE9 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC291D84595700C34FE9 /* Registration.storyboard */; };
 		EE46BC2D1D84597D00C34FE9 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC2C1D84597D00C34FE9 /* RegistrationViewController.m */; };
 		EE46BC311D8459D100C34FE9 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC301D8459D100C34FE9 /* DashboardViewController.m */; };
 		EE46BC331D8459E500C34FE9 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC321D8459E500C34FE9 /* Dashboard.storyboard */; };
-		EE46BC351D845A1300C34FE9 /* Expense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC341D845A1300C34FE9 /* Expense.storyboard */; };
-		EE46BC381D845A3900C34FE9 /* ExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC371D845A3900C34FE9 /* ExpenseViewController.m */; };
-		EE46BC3B1D845A4E00C34FE9 /* IncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */; };
-		EE46BC3E1D845A6900C34FE9 /* Income.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC3D1D845A6900C34FE9 /* Income.storyboard */; };
+		EE46BC351D845A1300C34FE9 /* Transaction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46BC341D845A1300C34FE9 /* Transaction.storyboard */; };
+		EE46BC381D845A3900C34FE9 /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC371D845A3900C34FE9 /* TransactionViewController.m */; };
 		EE46BC411D8472C300C34FE9 /* ControllerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC401D8472C300C34FE9 /* ControllerLoader.swift */; };
 		EE46BC431D84733600C34FE9 /* ControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC421D84733600C34FE9 /* ControllerPresenter.swift */; };
 		EE46BC451D8473C200C34FE9 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46BC441D8473C200C34FE9 /* AlertHandler.swift */; };
@@ -56,18 +70,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0593541D850F4A0037BC1B /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Account+CoreDataProperties.h"; path = "Coredata/Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EE0593551D850F4A0037BC1B /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Account+CoreDataProperties.m"; path = "Coredata/Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EE0593561D850F4A0037BC1B /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = Coredata/Account.h; sourceTree = "<group>"; };
+		EE0593571D850F4A0037BC1B /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Account.m; path = Coredata/Account.m; sourceTree = "<group>"; };
+		EE0593581D850F4A0037BC1B /* Amount+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Amount+CoreDataProperties.h"; path = "Coredata/Amount+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EE0593591D850F4A0037BC1B /* Amount+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Amount+CoreDataProperties.m"; path = "Coredata/Amount+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EE05935A1D850F4A0037BC1B /* Amount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Amount.h; path = Coredata/Amount.h; sourceTree = "<group>"; };
+		EE05935B1D850F4A0037BC1B /* Amount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Amount.m; path = Coredata/Amount.m; sourceTree = "<group>"; };
+		EE05935C1D850F4A0037BC1B /* Frequency+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Frequency+CoreDataProperties.h"; path = "Coredata/Frequency+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EE05935D1D850F4A0037BC1B /* Frequency+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Frequency+CoreDataProperties.m"; path = "Coredata/Frequency+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EE05935E1D850F4A0037BC1B /* Frequency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Frequency.h; path = Coredata/Frequency.h; sourceTree = "<group>"; };
+		EE05935F1D850F4A0037BC1B /* Frequency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Frequency.m; path = Coredata/Frequency.m; sourceTree = "<group>"; };
+		EE0593621D850F4A0037BC1B /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transaction.h; path = Coredata/Transaction.h; sourceTree = "<group>"; };
+		EE0593631D850F4A0037BC1B /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Transaction.m; path = Coredata/Transaction.m; sourceTree = "<group>"; };
+		EE0593641D850F4A0037BC1B /* Income+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Income+CoreDataProperties.h"; path = "Coredata/Income+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EE0593651D850F4A0037BC1B /* Income+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Income+CoreDataProperties.m"; path = "Coredata/Income+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EE0593661D850F4A0037BC1B /* Income.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Income.h; path = Coredata/Income.h; sourceTree = "<group>"; };
+		EE0593671D850F4A0037BC1B /* Income.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Income.m; path = Coredata/Income.m; sourceTree = "<group>"; };
+		EE0593681D850F4A0037BC1B /* Expense+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Expense+CoreDataProperties.h"; path = "Coredata/Expense+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EE0593691D850F4A0037BC1B /* Expense+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Expense+CoreDataProperties.m"; path = "Coredata/Expense+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EE05936A1D850F4A0037BC1B /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expense.h; path = Coredata/Expense.h; sourceTree = "<group>"; };
+		EE05936B1D850F4A0037BC1B /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = Coredata/Expense.m; sourceTree = "<group>"; };
+		EE0593781D85110E0037BC1B /* TransactionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionStore.swift; path = Store/TransactionStore.swift; sourceTree = "<group>"; };
+		EE05937A1D85149D0037BC1B /* Transaction+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Transaction+CoreDataProperties.h"; path = "Coredata/Transaction+CoreDataProperties.h"; sourceTree = "<group>"; };
+		EE05937B1D85149D0037BC1B /* Transaction+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Transaction+CoreDataProperties.m"; path = "Coredata/Transaction+CoreDataProperties.m"; sourceTree = "<group>"; };
+		EE05937D1D8515590037BC1B /* CoreDataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		EE0593801D851A860037BC1B /* ManagedObjectContexter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectContexter.swift; path = Helpers/ManagedObjectContexter.swift; sourceTree = "<group>"; };
+		EE0593831D851E160037BC1B /* ObjectFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectFactory.swift; sourceTree = "<group>"; };
 		EE46BC291D84595700C34FE9 /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		EE46BC2B1D84597D00C34FE9 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
 		EE46BC2C1D84597D00C34FE9 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
 		EE46BC2F1D8459D100C34FE9 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		EE46BC301D8459D100C34FE9 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		EE46BC321D8459E500C34FE9 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		EE46BC341D845A1300C34FE9 /* Expense.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Expense.storyboard; sourceTree = "<group>"; };
-		EE46BC361D845A3900C34FE9 /* ExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseViewController.h; sourceTree = "<group>"; };
-		EE46BC371D845A3900C34FE9 /* ExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseViewController.m; sourceTree = "<group>"; };
-		EE46BC391D845A4E00C34FE9 /* IncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IncomeViewController.h; path = Income/IncomeViewController.h; sourceTree = "<group>"; };
-		EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IncomeViewController.m; path = Income/IncomeViewController.m; sourceTree = "<group>"; };
-		EE46BC3D1D845A6900C34FE9 /* Income.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Income.storyboard; sourceTree = "<group>"; };
+		EE46BC341D845A1300C34FE9 /* Transaction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Transaction.storyboard; sourceTree = "<group>"; };
+		EE46BC361D845A3900C34FE9 /* TransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionViewController.h; sourceTree = "<group>"; };
+		EE46BC371D845A3900C34FE9 /* TransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionViewController.m; sourceTree = "<group>"; };
 		EE46BC3F1D8472C300C34FE9 /* PersonalFinance-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PersonalFinance-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE46BC401D8472C300C34FE9 /* ControllerLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllerLoader.swift; path = Protocols/ControllerLoader.swift; sourceTree = "<group>"; };
 		EE46BC421D84733600C34FE9 /* ControllerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerPresenter.swift; sourceTree = "<group>"; };
@@ -127,6 +166,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE0593531D850F2B0037BC1B /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				EE0593541D850F4A0037BC1B /* Account+CoreDataProperties.h */,
+				EE0593551D850F4A0037BC1B /* Account+CoreDataProperties.m */,
+				EE0593561D850F4A0037BC1B /* Account.h */,
+				EE0593571D850F4A0037BC1B /* Account.m */,
+				EE0593581D850F4A0037BC1B /* Amount+CoreDataProperties.h */,
+				EE0593591D850F4A0037BC1B /* Amount+CoreDataProperties.m */,
+				EE05935A1D850F4A0037BC1B /* Amount.h */,
+				EE05935B1D850F4A0037BC1B /* Amount.m */,
+				EE05935C1D850F4A0037BC1B /* Frequency+CoreDataProperties.h */,
+				EE05935D1D850F4A0037BC1B /* Frequency+CoreDataProperties.m */,
+				EE05935E1D850F4A0037BC1B /* Frequency.h */,
+				EE05935F1D850F4A0037BC1B /* Frequency.m */,
+				EE0593621D850F4A0037BC1B /* Transaction.h */,
+				EE0593631D850F4A0037BC1B /* Transaction.m */,
+				EE05937A1D85149D0037BC1B /* Transaction+CoreDataProperties.h */,
+				EE05937B1D85149D0037BC1B /* Transaction+CoreDataProperties.m */,
+				EE0593641D850F4A0037BC1B /* Income+CoreDataProperties.h */,
+				EE0593651D850F4A0037BC1B /* Income+CoreDataProperties.m */,
+				EE0593661D850F4A0037BC1B /* Income.h */,
+				EE0593671D850F4A0037BC1B /* Income.m */,
+				EE0593681D850F4A0037BC1B /* Expense+CoreDataProperties.h */,
+				EE0593691D850F4A0037BC1B /* Expense+CoreDataProperties.m */,
+				EE05936A1D850F4A0037BC1B /* Expense.h */,
+				EE05936B1D850F4A0037BC1B /* Expense.m */,
+			);
+			name = "Core data";
+			sourceTree = "<group>";
+		};
+		EE05937F1D851A610037BC1B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EE0593801D851A860037BC1B /* ManagedObjectContexter.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		EE0593821D851DC90037BC1B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EE0593831D851E160037BC1B /* ObjectFactory.swift */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
 		EE46BC221D84573200C34FE9 /* Component Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,29 +223,20 @@
 			name = "Component Dashboard";
 			sourceTree = "<group>";
 		};
-		EE46BC231D84579200C34FE9 /* Component Income */ = {
+		EE46BC241D84579D00C34FE9 /* Component Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				EE46BC391D845A4E00C34FE9 /* IncomeViewController.h */,
-				EE46BC3A1D845A4E00C34FE9 /* IncomeViewController.m */,
-				EE46BC3D1D845A6900C34FE9 /* Income.storyboard */,
+				EE46BC341D845A1300C34FE9 /* Transaction.storyboard */,
+				EE46BC361D845A3900C34FE9 /* TransactionViewController.h */,
+				EE46BC371D845A3900C34FE9 /* TransactionViewController.m */,
 			);
-			name = "Component Income";
-			sourceTree = "<group>";
-		};
-		EE46BC241D84579D00C34FE9 /* Component Expanse */ = {
-			isa = PBXGroup;
-			children = (
-				EE46BC341D845A1300C34FE9 /* Expense.storyboard */,
-				EE46BC361D845A3900C34FE9 /* ExpenseViewController.h */,
-				EE46BC371D845A3900C34FE9 /* ExpenseViewController.m */,
-			);
-			name = "Component Expanse";
+			name = "Component Transaction";
 			sourceTree = "<group>";
 		};
 		EE46BC251D8457A800C34FE9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE0593531D850F2B0037BC1B /* Core data */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -173,6 +250,7 @@
 				EE46BC441D8473C200C34FE9 /* AlertHandler.swift */,
 				EE46BC461D8473E100C34FE9 /* Alert.swift */,
 				EE46BC5B1D84849800C34FE9 /* RegistrationPresentable.swift */,
+				EE05937D1D8515590037BC1B /* CoreDataHandler.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -181,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				EE46BC591D84816C00C34FE9 /* AccountStore.swift */,
+				EE0593781D85110E0037BC1B /* TransactionStore.swift */,
 			);
 			name = Stores;
 			sourceTree = "<group>";
@@ -222,8 +301,7 @@
 				EE46BC281D84592E00C34FE9 /* Account Registration */,
 				EE46BC2E1D84599800C34FE9 /* Home */,
 				EE46BC221D84573200C34FE9 /* Component Dashboard */,
-				EE46BC241D84579D00C34FE9 /* Component Expanse */,
-				EE46BC231D84579200C34FE9 /* Component Income */,
+				EE46BC241D84579D00C34FE9 /* Component Transaction */,
 			);
 			name = "Controllers Components";
 			sourceTree = "<group>";
@@ -283,7 +361,9 @@
 				EE46BC261D8457B600C34FE9 /* Protocols */,
 				EE46BC481D84740500C34FE9 /* Protocol Implementations */,
 				EE46BC251D8457A800C34FE9 /* Models */,
+				EE0593821D851DC90037BC1B /* Factories */,
 				EE46BC4E1D84752F00C34FE9 /* Open Sources */,
+				EE05937F1D851A610037BC1B /* Helpers */,
 				EE6B5ADB1D83C55C00695ACF /* AppDelegate.h */,
 				EE6B5ADC1D83C55C00695ACF /* AppDelegate.m */,
 				EE6B5AE71D83C55C00695ACF /* Assets.xcassets */,
@@ -430,9 +510,8 @@
 				EE46BC331D8459E500C34FE9 /* Dashboard.storyboard in Resources */,
 				EE46BC2A1D84595700C34FE9 /* Registration.storyboard in Resources */,
 				EE6B5AE81D83C55C00695ACF /* Assets.xcassets in Resources */,
-				EE46BC3E1D845A6900C34FE9 /* Income.storyboard in Resources */,
 				EE6B5AE31D83C55C00695ACF /* Main.storyboard in Resources */,
-				EE46BC351D845A1300C34FE9 /* Expense.storyboard in Resources */,
+				EE46BC351D845A1300C34FE9 /* Transaction.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,26 +536,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0593791D85110E0037BC1B /* TransactionStore.swift in Sources */,
 				EE46BC4B1D8474B600C34FE9 /* SimpleAlertHandler.swift in Sources */,
 				EE46BC5C1D84849800C34FE9 /* RegistrationPresentable.swift in Sources */,
 				EE46BC431D84733600C34FE9 /* ControllerPresenter.swift in Sources */,
 				EE6B5AE61D83C55C00695ACF /* PersonalFinance.xcdatamodeld in Sources */,
 				EE46BC531D84756200C34FE9 /* iToast.m in Sources */,
-				EE46BC381D845A3900C34FE9 /* ExpenseViewController.m in Sources */,
+				EE46BC381D845A3900C34FE9 /* TransactionViewController.m in Sources */,
 				EE46BC581D84810100C34FE9 /* RegistrationPresenter.swift in Sources */,
+				EE05936C1D850F4A0037BC1B /* Account+CoreDataProperties.m in Sources */,
+				EE05937E1D8515590037BC1B /* CoreDataHandler.swift in Sources */,
 				EE46BC311D8459D100C34FE9 /* DashboardViewController.m in Sources */,
-				EE46BC3B1D845A4E00C34FE9 /* IncomeViewController.m in Sources */,
+				EE05936D1D850F4A0037BC1B /* Account.m in Sources */,
+				EE0593841D851E160037BC1B /* ObjectFactory.swift in Sources */,
 				EE6B5AE01D83C55C00695ACF /* HomeViewController.m in Sources */,
+				EE0593711D850F4A0037BC1B /* Frequency.m in Sources */,
+				EE0593731D850F4A0037BC1B /* Transaction.m in Sources */,
 				EE46BC471D8473E100C34FE9 /* Alert.swift in Sources */,
+				EE0593811D851A860037BC1B /* ManagedObjectContexter.swift in Sources */,
+				EE0593741D850F4A0037BC1B /* Income+CoreDataProperties.m in Sources */,
 				EE46BC451D8473C200C34FE9 /* AlertHandler.swift in Sources */,
 				EE46BC411D8472C300C34FE9 /* ControllerLoader.swift in Sources */,
+				EE05937C1D85149D0037BC1B /* Transaction+CoreDataProperties.m in Sources */,
 				EE46BC2D1D84597D00C34FE9 /* RegistrationViewController.m in Sources */,
 				EE46BC561D847E6A00C34FE9 /* JVFloatLabeledTextField.m in Sources */,
+				EE05936E1D850F4A0037BC1B /* Amount+CoreDataProperties.m in Sources */,
 				EE6B5ADD1D83C55C00695ACF /* AppDelegate.m in Sources */,
 				EE46BC5A1D84816C00C34FE9 /* AccountStore.swift in Sources */,
 				EE46BC5E1D84944D00C34FE9 /* HomeControllerLoader.swift in Sources */,
+				EE0593761D850F4A0037BC1B /* Expense+CoreDataProperties.m in Sources */,
 				EE46BC4D1D84750C00C34FE9 /* ToastHandler.swift in Sources */,
 				EE6B5ADA1D83C55C00695ACF /* main.m in Sources */,
+				EE0593771D850F4A0037BC1B /* Expense.m in Sources */,
+				EE0593701D850F4A0037BC1B /* Frequency+CoreDataProperties.m in Sources */,
+				EE0593751D850F4A0037BC1B /* Income.m in Sources */,
+				EE05936F1D850F4A0037BC1B /* Amount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

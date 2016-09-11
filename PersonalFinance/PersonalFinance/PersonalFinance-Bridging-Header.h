@@ -5,3 +5,6 @@
 #import "iToast.h"
 #import "RegistrationViewController.h"
 #import "HomeViewController.h"
+#import "Transaction.h"
+#import "AppDelegate.h"
+#import "Account.h"

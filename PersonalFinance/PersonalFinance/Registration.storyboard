@@ -68,6 +68,10 @@
                             <constraint firstItem="J2z-vf-Khk" firstAttribute="centerY" secondItem="XnZ-aK-QjI" secondAttribute="centerY" id="oOK-Ny-Zjr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldAccountName" destination="e96-zV-0Gc" id="A0Y-uR-NmN"/>
+                        <outlet property="textFieldAccountNumber" destination="XiP-PW-Yzg" id="7di-cC-ddd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTr-HI-5Mm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

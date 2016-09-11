@@ -18,6 +18,9 @@ class HomeControllerLoader:NSObject, ControllerLoader {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         
         let window : UIWindow = UIApplication.sharedApplication().keyWindow!
-        window.rootViewController = vc
+//        window.rootViewController = vc
+        
+        window.rootViewController?.presentViewController(vc, animated: true, completion: nil)
+//        window.rootViewController = vc
     }
 }

@@ -7,12 +7,16 @@
 //
 
 #import "RegistrationViewController.h"
+#import "Account+CoreDataProperties.h"
+#import "Account.h"
 #import "PersonalFinance-Swift.h"
 
 @interface RegistrationViewController () {
     // SRP
     id<AccountStore> _store; // Dependency
     id<ControllerLoader> homeLoader; // Dependency
+    Account *_account; // dependency
+    
 }
 
 @end
@@ -29,6 +33,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setAccount:(Account *)account {
+    _account = account;
+}
+
 -(void)setStore:(id)store {
     _store = store;
 }
@@ -38,7 +46,10 @@
 }
 
 - (IBAction)saveAccount:(id)sender {
-    [_store createAccount];
+    _account.number = _textFieldAccountNumber.text;
+    _account.name = _textFieldAccountName.text;
+    
+    [_store createAccount:_account];
     [homeLoader loadController];
 }
 

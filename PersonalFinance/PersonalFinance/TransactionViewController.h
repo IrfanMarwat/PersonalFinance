@@ -1,5 +1,5 @@
 //
-//  IncomeViewController.h
+//  ExpenseViewController.h
 //  PersonalFinance
 //
 //  Created by Irfan on 9/10/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IncomeViewController : UIViewController
+@interface TransactionViewController : UIViewController
 
 @end
