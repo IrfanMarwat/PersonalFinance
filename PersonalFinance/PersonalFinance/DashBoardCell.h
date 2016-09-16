@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class DashboardCellData;
 
 @interface DashBoardCell : UICollectionViewCell
 
--(void)configureCellWithDependency:(DashboardCellData *)cellData;
+-(void)configureCellWithDependency:(id)cellData;
 
 @end

@@ -14,11 +14,12 @@ import CoreData
     func deleteItem(item: NSManagedObject)
     func fetchItems() -> Array<AnyObject>
     func saveContext()
+    func rollBack()
 }
 
 class CoreDataBasic:NSObject, CoreDataHandler {
     var entityName: String! // dependency Injection --> Must be injected through constructor
-    var context: NSManagedObjectContext! // dependency Injection --> Must be injected through constructo
+    var context: NSManagedObjectContext! // dependency Injection --> Must be injected through constructor
     
     init(entity: String, context: NSManagedObjectContext) {
         self.entityName = entity
@@ -52,5 +53,9 @@ class CoreDataBasic:NSObject, CoreDataHandler {
         } catch let error as NSError {
             print(error.userInfo)
         }
+    }
+    
+    func rollBack() {
+        ManagedObjectContexter.getManagedObjectContext().rollback()
     }
 }

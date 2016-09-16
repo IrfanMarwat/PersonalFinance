@@ -42,6 +42,7 @@
     [viewController setAccount:account];
     [viewController setStore:accountStore];
     [viewController setControllerLoader:homeLoader];
+    [viewController setAlertHandler:[[ToastHandler alloc] init]];
     
     self.window.rootViewController = viewController;
     [self.window becomeKeyWindow];

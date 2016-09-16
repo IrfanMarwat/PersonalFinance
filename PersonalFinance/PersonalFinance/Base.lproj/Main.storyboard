@@ -33,6 +33,8 @@
                                             <constraint firstAttribute="height" constant="50" id="HVG-vm-Vgs"/>
                                             <constraint firstAttribute="width" constant="50" id="PWK-6J-uVZ"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Add">
                                             <color key="titleColor" red="1" green="0.29494390209999999" blue="0.1517702964" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -46,10 +48,18 @@
                                             <action selector="plusButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAv-65-5fz"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKc-eq-QEB">
+                                        <rect key="frame" x="259" y="23" width="83" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.29494390209999999" blue="0.1517702964" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="lH9-JY-FBZ" secondAttribute="trailing" constant="35" id="JGE-Bm-Dxi"/>
+                                    <constraint firstItem="lKc-eq-QEB" firstAttribute="centerX" secondItem="c0t-7c-XEk" secondAttribute="centerX" id="QoO-sD-jG5"/>
+                                    <constraint firstItem="lKc-eq-QEB" firstAttribute="centerY" secondItem="c0t-7c-XEk" secondAttribute="centerY" id="YxO-Xy-YUR"/>
                                     <constraint firstAttribute="height" constant="70" id="c9x-rb-j9p"/>
                                     <constraint firstItem="lH9-JY-FBZ" firstAttribute="centerY" secondItem="c0t-7c-XEk" secondAttribute="centerY" id="wCJ-AL-01s"/>
                                 </constraints>
@@ -70,6 +80,7 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="buttonPlus" destination="lH9-JY-FBZ" id="aSQ-Ix-P9e"/>
+                        <outlet property="labelHeader" destination="lKc-eq-QEB" id="6VI-is-9fA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

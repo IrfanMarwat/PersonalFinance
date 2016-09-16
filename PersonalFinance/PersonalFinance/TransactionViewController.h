@@ -12,6 +12,8 @@
 @interface TransactionViewController : UIViewController
 
 -(void)setTransactionStore:(id)store;
+-(void)setAccountStore:(id)store;
 -(void)setTransaction:(Transaction *)transaction;
+-(void)setHeaderString:(NSString *)title;
 
 @end

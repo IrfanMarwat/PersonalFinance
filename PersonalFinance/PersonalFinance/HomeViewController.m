@@ -12,6 +12,7 @@
 @interface HomeViewController () <ControllerPresentable, HomeControllerLoading, TreeHandlerDelegate, HomeTreeHandling> {
     // Voilation of SRP ??? NO
     __weak IBOutlet UIButton *buttonPlus;
+    __weak IBOutlet UILabel *labelHeader;
     UINavigationController *_navigationController;
     id<ControllerPresenter> registrationPresenter; //dependency: must be injected by external source --> Property Injection
     id<ControllerLoader> dashboardLoader; //dependency: must be injected by external source --> Property Injection
@@ -49,7 +50,7 @@
 }
 
 -(void)setHeaderTitle:(NSString *)title {
-    
+    labelHeader.text = title;
 }
 
 -(void)setDashboardLoader:(id)loader {

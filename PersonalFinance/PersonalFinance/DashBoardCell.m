@@ -11,7 +11,7 @@
 
 @implementation DashBoardCell
 
--(void)configureCellWithDependency:(DashboardCellData *)cellData {
+-(void)configureCellWithDependency:(id)cellData {
     [[[NSException alloc] initWithName:@"Dashboard Cell" reason:@"Must implement this method in sub classes" userInfo:nil] raise];
 }
 

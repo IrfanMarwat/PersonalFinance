@@ -7,8 +7,6 @@
 //
 
 #import "Income.h"
-#import "Amount.h"
-#import "Frequency.h"
 
 @implementation Income
 

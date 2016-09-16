@@ -15,7 +15,7 @@ class SimpleAlertHandler: AlertHandler {
         _viewController = viewController
     }
     
-    func presentAlert(alert: Alert) {
+    @objc func presentAlert(alert: Alert) {
         let alertController = UIAlertController(title: "Alert", message: alert.message, preferredStyle:.Alert)
         let alertActionOK = UIAlertAction(title: "OK", style: .Cancel) { action -> Void in
             

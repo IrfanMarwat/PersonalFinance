@@ -6,6 +6,8 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
+import Foundation
+
 class RegistrationPresenter:NSObject, ControllerPresenter {
     var store: AccountStore? = nil // dependency
     var registrationPresentable: ControllerPresentable? = nil  // dependency

@@ -2,7 +2,7 @@
 //  Income+CoreDataProperties.m
 //  PersonalFinance
 //
-//  Created by Irfan on 9/11/16.
+//  Created by Irfan on 9/13/16.
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,7 +13,5 @@
 
 @implementation Income (CoreDataProperties)
 
-@dynamic amount;
-@dynamic frequency;
 
 @end

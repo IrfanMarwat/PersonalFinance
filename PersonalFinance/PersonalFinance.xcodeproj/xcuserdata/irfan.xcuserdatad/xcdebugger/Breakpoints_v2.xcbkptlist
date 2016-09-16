@@ -2,4 +2,273 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PersonalFinance/ChartCollectionViewCell.m"
+            timestampString = "495687669.89951"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-configureCellWithDependency:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PersonalFinanceTests/RegistrationControllerTests.swift"
+            timestampString = "495686972.077259"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "setUp()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PersonalFinanceTests/RegistrationControllerTests.swift"
+            timestampString = "495686999.463183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "testIfCreateWasCalledOnStore()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.testIfCreateWasCalledOnStore (PersonalFinanceTests.RegistrationControllerTests)() -&gt; ()"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.116555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PersonalFinanceTests.RegistrationControllerTests.testIfCreateWasCalledOnStore (PersonalFinanceTests.RegistrationControllerTests)() -&gt; ()"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.116976"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "14">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PersonalFinanceTests/RegistrationControllerTests.swift"
+            timestampString = "495687041.835661"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "StubRegistrationFieldValidator"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.setUp (PersonalFinanceTests.RegistrationControllerTests)() -&gt; ()"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.117319"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.setUp (PersonalFinanceTests.RegistrationControllerTests)() -&gt; ()"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.118316"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "659">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.__allocating_init (PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.Type)() -&gt; PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.118697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.state.getter : Swift.Bool"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.119093"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.state.setter : Swift.Bool"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.119566"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.state.materializeForSet : Swift.Bool"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.119918"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.init (PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.Type)() -&gt; PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.120289"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PersonalFinanceTests/RegistrationControllerTests.swift"
+            timestampString = "495687055.218779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "validate()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.validate (PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator)() -&gt; Swift.Bool"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.121602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "9">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator.validate (PersonalFinanceTests.RegistrationControllerTests.StubRegistrationFieldValidator)() -&gt; Swift.Bool"
+                  moduleName = "PersonalFinanceTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/irfan/PersonalFinance/PersonalFinance/PersonalFinanceTests/RegistrationControllerTests.swift"
+                  timestampString = "495687239.122031"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "13">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PersonalFinance/RegistrationViewController.m"
+            timestampString = "495687187.212009"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-proceedToHome"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

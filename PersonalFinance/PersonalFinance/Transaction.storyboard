@@ -21,15 +21,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="22k-Sx-duM">
                                 <rect key="frame" x="150" y="30" width="300" height="120"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name(Description)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-79-3Po" customClass="JVFloatLabeledTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Name(Description)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-79-3Po" customClass="CharacterTextField" customModule="PersonalFinance" customModuleProvider="target">
                                         <rect key="frame" x="5" y="5" width="290" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wug-Sn-z8b" customClass="JVFloatLabeledTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wug-Sn-z8b" customClass="AmountTextField" customModule="PersonalFinance" customModuleProvider="target">
                                         <rect key="frame" x="5" y="63" width="290" height="52"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,23 +47,43 @@
                                     <constraint firstItem="wug-Sn-z8b" firstAttribute="top" secondItem="ZUi-79-3Po" secondAttribute="bottom" constant="5" id="yjr-RA-Qae"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-VV-xy2">
-                                <rect key="frame" x="155" y="161" width="290" height="53"/>
-                                <color key="backgroundColor" red="0.53614574670791626" green="0.79425358772277832" blue="0.91552621126174927" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Recurrent">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurrent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2Q-Vd-Aer">
+                                <rect key="frame" x="191" y="176" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-VV-xy2">
+                                <rect key="frame" x="275" y="161" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="36T-VE-hZ8"/>
+                                    <constraint firstAttribute="width" constant="50" id="7yc-fV-vBu"/>
+                                </constraints>
+                                <state key="normal" image="tick">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="tick_selected"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonRecurrent:" destination="Uik-YA-PLy" eventType="touchUpInside" id="ejs-M6-5iS"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34y-vc-FOq">
-                                <rect key="frame" x="150" y="247" width="300" height="180"/>
+                                <rect key="frame" x="150" y="226" width="300" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Today" borderStyle="line" placeholder="Start Month" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-Zo-YYT" customClass="JVFloatLabeledTextField">
-                                        <rect key="frame" x="5" y="63" width="290" height="53"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Start Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahr-Zo-YYT" customClass="NumberTextField" customModule="PersonalFinance" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="63" width="290" height="54"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="End Month" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOo-YF-jYf" customClass="JVFloatLabeledTextField">
-                                        <rect key="frame" x="5" y="121" width="290" height="54"/>
+                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="End Term" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DOo-YF-jYf" customClass="NumberTextField" customModule="PersonalFinance" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="122" width="290" height="53"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
@@ -93,38 +113,84 @@
                                     <constraint firstAttribute="trailing" secondItem="Ahr-Zo-YYT" secondAttribute="trailing" constant="5" id="xRL-cP-moh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-27-VFS">
-                                <rect key="frame" x="155" y="435" width="290" height="53"/>
-                                <color key="backgroundColor" red="0.53614574670000004" green="0.79425358769999999" blue="0.9155262113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Save">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveTransaction:" destination="Uik-YA-PLy" eventType="touchUpInside" id="VHm-XV-Am3"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wp7-lk-bHy">
+                                <rect key="frame" x="150" y="414" width="300" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-27-VFS">
+                                        <rect key="frame" x="5" y="0.0" width="143" height="50"/>
+                                        <color key="backgroundColor" red="0.53614574670000004" green="0.79425358769999999" blue="0.9155262113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveTransaction:" destination="Uik-YA-PLy" eventType="touchUpInside" id="VHm-XV-Am3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD2-k3-C2i" userLabel="Cancel">
+                                        <rect key="frame" x="153" y="0.0" width="142" height="50"/>
+                                        <color key="backgroundColor" red="0.53614574670000004" green="0.79425358769999999" blue="0.9155262113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelTransaction:" destination="Uik-YA-PLy" eventType="touchUpInside" id="BiK-mo-pDP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gD2-k3-C2i" secondAttribute="trailing" constant="5" id="9wt-KP-nOG"/>
+                                    <constraint firstItem="XnC-27-VFS" firstAttribute="leading" secondItem="wp7-lk-bHy" secondAttribute="leading" constant="5" id="LGR-uR-3PV"/>
+                                    <constraint firstAttribute="bottom" secondItem="XnC-27-VFS" secondAttribute="bottom" id="N2F-1D-evl"/>
+                                    <constraint firstItem="gD2-k3-C2i" firstAttribute="leading" secondItem="XnC-27-VFS" secondAttribute="trailing" constant="5" id="Uby-58-aDn"/>
+                                    <constraint firstAttribute="bottom" secondItem="gD2-k3-C2i" secondAttribute="bottom" id="VUc-iX-c8v"/>
+                                    <constraint firstItem="gD2-k3-C2i" firstAttribute="top" secondItem="wp7-lk-bHy" secondAttribute="top" id="eMq-Lq-MUu"/>
+                                    <constraint firstItem="gD2-k3-C2i" firstAttribute="width" secondItem="XnC-27-VFS" secondAttribute="width" id="nDD-jS-sVa"/>
+                                    <constraint firstAttribute="height" constant="50" id="oRN-VL-90m"/>
+                                    <constraint firstItem="XnC-27-VFS" firstAttribute="top" secondItem="wp7-lk-bHy" secondAttribute="top" id="z49-2a-G7D"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income Addition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tL-jh-Uaq">
+                                <rect key="frame" x="238" y="7" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.29494390209999999" blue="0.1517702964" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kxI-VV-xy2" firstAttribute="height" secondItem="wug-Sn-z8b" secondAttribute="height" id="9h2-Me-cDD"/>
+                            <constraint firstItem="kxI-VV-xy2" firstAttribute="centerX" secondItem="wug-Sn-z8b" secondAttribute="centerX" id="7To-Z8-djr"/>
                             <constraint firstItem="22k-Sx-duM" firstAttribute="centerX" secondItem="B2H-dD-uzm" secondAttribute="centerX" id="CuK-A6-s8e"/>
                             <constraint firstItem="kxI-VV-xy2" firstAttribute="top" secondItem="wug-Sn-z8b" secondAttribute="bottom" constant="16" id="Fnc-1e-nJ4"/>
-                            <constraint firstItem="XnC-27-VFS" firstAttribute="trailing" secondItem="DOo-YF-jYf" secondAttribute="trailing" id="HbV-bz-dNd"/>
-                            <constraint firstItem="XnC-27-VFS" firstAttribute="height" secondItem="DOo-YF-jYf" secondAttribute="height" id="IHW-WD-hni"/>
-                            <constraint firstItem="34y-vc-FOq" firstAttribute="top" secondItem="kxI-VV-xy2" secondAttribute="bottom" constant="33" id="LX5-YG-60W"/>
+                            <constraint firstItem="34y-vc-FOq" firstAttribute="top" secondItem="kxI-VV-xy2" secondAttribute="bottom" constant="15" id="LX5-YG-60W"/>
                             <constraint firstItem="34y-vc-FOq" firstAttribute="leading" secondItem="22k-Sx-duM" secondAttribute="leading" id="Lql-UO-S0Y"/>
-                            <constraint firstItem="XnC-27-VFS" firstAttribute="leading" secondItem="DOo-YF-jYf" secondAttribute="leading" id="PaN-67-h1q"/>
-                            <constraint firstItem="kxI-VV-xy2" firstAttribute="leading" secondItem="wug-Sn-z8b" secondAttribute="leading" id="SRr-Wk-Ce4"/>
+                            <constraint firstItem="wp7-lk-bHy" firstAttribute="leading" secondItem="34y-vc-FOq" secondAttribute="leading" id="RO1-e6-psc"/>
                             <constraint firstItem="22k-Sx-duM" firstAttribute="centerY" secondItem="B2H-dD-uzm" secondAttribute="centerY" multiplier="0.3" id="ShK-Qa-oov"/>
-                            <constraint firstItem="kxI-VV-xy2" firstAttribute="trailing" secondItem="wug-Sn-z8b" secondAttribute="trailing" id="WSR-iO-pGe"/>
+                            <constraint firstItem="kxI-VV-xy2" firstAttribute="leading" secondItem="c2Q-Vd-Aer" secondAttribute="trailing" constant="8" id="Sll-0z-wEm"/>
+                            <constraint firstItem="22k-Sx-duM" firstAttribute="top" secondItem="0tL-jh-Uaq" secondAttribute="bottom" constant="2" id="Tlj-qS-ffP"/>
+                            <constraint firstItem="wp7-lk-bHy" firstAttribute="trailing" secondItem="34y-vc-FOq" secondAttribute="trailing" id="UDI-Jt-2rn"/>
                             <constraint firstItem="34y-vc-FOq" firstAttribute="trailing" secondItem="22k-Sx-duM" secondAttribute="trailing" id="gvs-Kd-80g"/>
-                            <constraint firstItem="XnC-27-VFS" firstAttribute="top" secondItem="DOo-YF-jYf" secondAttribute="bottom" constant="13" id="vlO-Gp-NYU"/>
+                            <constraint firstItem="c2Q-Vd-Aer" firstAttribute="centerY" secondItem="kxI-VV-xy2" secondAttribute="centerY" id="gya-9c-wn1"/>
+                            <constraint firstItem="wp7-lk-bHy" firstAttribute="top" secondItem="34y-vc-FOq" secondAttribute="bottom" constant="8" id="mWm-xZ-WDj"/>
+                            <constraint firstItem="0tL-jh-Uaq" firstAttribute="centerX" secondItem="B2H-dD-uzm" secondAttribute="centerX" id="rqp-9r-Z2T"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonTick" destination="kxI-VV-xy2" id="Dsa-li-vYz"/>
+                        <outlet property="labelHeader" destination="0tL-jh-Uaq" id="Iy8-C4-fyh"/>
+                        <outlet property="textFieldAmount" destination="wug-Sn-z8b" id="bkS-52-QNe"/>
+                        <outlet property="textFieldDescription" destination="ZUi-79-3Po" id="sX6-bF-qYf"/>
+                        <outlet property="textFieldEndTerm" destination="DOo-YF-jYf" id="eoF-hw-vM2"/>
+                        <outlet property="textFieldStartTerm" destination="Ahr-Zo-YYT" id="6eD-gs-cU5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnH-pM-ib3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="218" y="402"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tick" width="61" height="61"/>
+        <image name="tick_selected" width="61" height="61"/>
+    </resources>
 </document>

@@ -11,12 +11,13 @@
 #import "Account.h"
 #import "PersonalFinance-Swift.h"
 
-@interface RegistrationViewController () {
+@interface RegistrationViewController () <TextFieldDelegate> {
     // SRP
     id<AccountStore> _store; // Dependency
     id<ControllerLoader> homeLoader; // Dependency
     Account *_account; // dependency
-    
+    id<FieldValidator> registrationFieldValidator; // dependency
+    id<AlertHandler> toastHandler; // dependency
 }
 
 @end
@@ -25,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.textFieldAccountName.textFieldDelegate = self;
+    self.textFieldAccountNumber.textFieldDelegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -45,12 +48,62 @@
     homeLoader = loader;
 }
 
+-(void)setAlertHandler:(id)alertHandler {
+    toastHandler = alertHandler;
+}
+
+-(void)setValidator:(id)validator {
+    registrationFieldValidator = validator;
+}
+
 - (IBAction)saveAccount:(id)sender {
+    registrationFieldValidator = [[RegistrationFieldValidator alloc] initWithAccountNumber:self.textFieldAccountNumber.text accountName:self.textFieldAccountName.text];
+    [self proceedToHome];
+}
+
+-(void)proceedToHome {
+    if ([self validateFields]) {
+        [self saveAccount];
+    } else {
+        [toastHandler presentAlert:[[ErrorAlert alloc] initWithMessage:registrationFieldValidator.errorMessage]];
+    }
+}
+
+-(BOOL)validateFields {
+    return [registrationFieldValidator validate];
+}
+
+-(void)saveAccount {
     _account.number = _textFieldAccountNumber.text;
     _account.name = _textFieldAccountName.text;
     
     [_store createAccount:_account];
     [homeLoader loadController];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch * touch = [touches anyObject];
+    if(touch.phase == UITouchPhaseBegan) {
+        [self.textFieldAccountName resignFirstResponder];
+        [self.textFieldAccountNumber resignFirstResponder];
+    }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField isEqual:self.textFieldAccountNumber]) {
+        [self.textFieldAccountNumber resignFirstResponder];
+        return true;
+    }
+    registrationFieldValidator = [[RegistrationFieldValidator alloc] initWithAccountNumber:self.textFieldAccountNumber.text accountName:self.textFieldAccountName.text];
+    [self proceedToHome];
+    return true;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField * __nonnull)textField {
+    
+}
+- (void)textFieldDidEndEditing:(UITextField * __nonnull)textField {
+    
 }
 
 /*

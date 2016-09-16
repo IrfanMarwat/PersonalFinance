@@ -7,8 +7,8 @@
 //
 
 
-class ToastHandler: AlertHandler {
-    func presentAlert(alert: Alert) { // Method Injection (Dependency)
-        iToast.makeText(alert.message).setDuration(1000).setGravity(iToastGravityCenter).show()
+class ToastHandler:NSObject, AlertHandler {
+    @objc func presentAlert(alert: Alert) { // Method Injection (Dependency)
+        iToast.makeText(alert.message).setDuration(2000).setGravity(iToastGravityCenter).show()
     }
 }

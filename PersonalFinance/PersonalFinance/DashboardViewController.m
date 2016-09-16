@@ -12,20 +12,19 @@
 #import "DashboardDatasource.h"
 #import "PersonalFinance-Swift.h"
 
-@protocol DashboardFunctionalityProvider <NSObject>
+@protocol AutoUpdatingStore <NSObject>
 
--(void)loadIncome;
--(void)loadExpense;
+-(void)updateStore;
 
 @end
 
 @interface DashboardViewController ()<TreeButtonsProtocol, DashboardFunctionalityProvider, ControllerPresentable> {
-    // SRP
+    // SRP  ???
     id<ControllerPresenter> _transactionPresenter; // dependency
     id<TreeFactory> _treefactory; // dependency
     id<HomeTreeHandling> _homeTreeDelegate;
     DashboardDatasource *datasource;
-    id<DashboardStore> _store;
+    id<DashboardStore> _store; // dependency
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -42,10 +41,13 @@
     [self setupDatasource];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.collectionView reloadData];
+}
+
 -(void)setupDatasource {
-    _store = [[LocalDashboardStore alloc] init];
-    [_store createItem];
-    [_store createItem];
     datasource = [[DashboardDatasource alloc] initWithStore:_store];
     _collectionView.dataSource = datasource;
     _collectionView.delegate = datasource;
@@ -56,6 +58,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setStore:(id)store {
+    _store = store;
+}
+
 -(void)setTreeFactory:(id)treeFactory {
     _treefactory = treeFactory;
 }
@@ -64,25 +70,25 @@
     _homeTreeDelegate = homeTreeDelegate;
 }
 
+-(UIViewController *)getViewController {
+    return self;
+}
+
 -(void)setTransactionPresenter:(id)controllerPresenter {
     _transactionPresenter = controllerPresenter;
 }
 
 -(void)nodeSelected:(ParentTreeButton *)sender {
     [_homeTreeDelegate collapseTree];
-    [self loadIncome];
-    
-}
-
--(UIViewController *)getViewController {
-    return self;
+    id<ActionHandler> treeActionHandler = [[[TreeActionHandlerProvider alloc] initWithDashboardFunctionalityProvider:self] providerTreeActionHandler:sender];
+    [treeActionHandler handleAction];
 }
 
 -(void)loadIncome {
     id<TransactionStore> store = [[[IncomeStoreFactory alloc] init] getObject];
     Transaction *transaction = [[Income alloc] initWithContext:[ManagedObjectContexter getManagedObjectContext]];
     
-    _transactionPresenter = [[TransactionPresenter alloc] initWithStore:store controllerPresentable:self transaction:transaction];
+    _transactionPresenter = [[TransactionPresenter alloc] initWithStore:store controllerPresentable:self transaction:transaction title:@"Income Addition"];
     
     [_transactionPresenter presentController];
     
@@ -92,7 +98,7 @@
     id<TransactionStore> store = [[[ExpenseStoreFactory alloc] init] getObject];
     Transaction *transaction = [[Expense alloc] initWithContext:[ManagedObjectContexter getManagedObjectContext]];
     
-    _transactionPresenter = [[TransactionPresenter alloc] initWithStore:store controllerPresentable:self transaction:transaction];
+    _transactionPresenter = [[TransactionPresenter alloc] initWithStore:store controllerPresentable:self transaction:transaction title:@"Expense Addition"];
     
     [_transactionPresenter presentController];
 }

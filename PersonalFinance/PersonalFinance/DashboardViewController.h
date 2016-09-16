@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DashboardFunctionalityProvider <NSObject>
+
+-(void)loadIncome;
+-(void)loadExpense;
+
+@end
+
 @interface DashboardViewController : UIViewController
 
 -(void)setHomeTreeDelegate:(id)homeTreeDelegate;
 -(void)setTransactionPresenter:(id)controllerPresenter;
 -(void)setTreeFactory:(id)treeFactory;
+-(void)setStore:(id)store;
 
 @end

@@ -6,6 +6,9 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
-protocol AlertHandler {
+// The concrete instances of this protocol will be capable of presenting alert of various types like native or custom(Toast) etc's
+// Alert is the dependency
+
+@objc protocol AlertHandler {
     func presentAlert(alert: Alert)
 }

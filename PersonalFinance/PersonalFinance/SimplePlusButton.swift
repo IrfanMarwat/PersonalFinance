@@ -9,11 +9,16 @@
 class SimplePlusButton: ParentTreeButton {
     var _name = ""
     
+    convenience init(name: String, frame: CGRect) {
+        self.init(frame: frame)
+        
+        self.setTitle(name, forState: UIControlState.Normal)
+        self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        self.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 6)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.setTitle(_name, forState: UIControlState.Normal)
-        self.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
     }
     
     required init?(coder aDecoder: NSCoder) {

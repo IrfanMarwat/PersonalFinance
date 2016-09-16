@@ -29,17 +29,19 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    DashboardCellData *cellData = [[_store allItems] objectAtIndex:indexPath.row];
+    id cellDependency = [[_store allDependencies] objectAtIndex:indexPath.row];
     NSString *identifier = [[_store allIdentifiers] objectAtIndex:indexPath.row];
     
     DashBoardCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    [cell configureCellWithDependency:cellData];
+    [cell configureCellWithDependency:cellDependency];
     
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(300, 390);
+    float width = [[UIScreen mainScreen] bounds].size.width - 10;
+    NSNumber *height = [[_store allCellHeights] objectAtIndex:indexPath.row];
+    return CGSizeMake(width, height.floatValue);
 }
 @end

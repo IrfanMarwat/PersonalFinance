@@ -6,6 +6,22 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
-protocol Alert {
+// Concrete instance of this protocol will build a message for presenting
+
+@objc protocol Alert {
     var message: String {get}
+}
+
+class ErrorAlert:NSObject, Alert {
+    var privateMessage: String = ""
+    
+    init(message: String) {
+        privateMessage = message
+    }
+    
+    @objc internal var message: String {
+        get {
+            return privateMessage
+        }
+    }
 }

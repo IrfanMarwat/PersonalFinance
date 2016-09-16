@@ -5,36 +5,26 @@
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="account" inverseEntity="Transaction" syncable="YES"/>
     </entity>
-    <entity name="Amount" representedClassName="Amount" syncable="YES">
-        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="amount" inverseEntity="Expense" syncable="YES"/>
-        <relationship name="income" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Income" inverseName="amount" inverseEntity="Income" syncable="YES"/>
-    </entity>
-    <entity name="Expense" representedClassName="Expense" parentEntity="Transaction" syncable="YES">
-        <relationship name="amount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Amount" inverseName="expense" inverseEntity="Amount" syncable="YES"/>
-        <relationship name="frequency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Frequency" inverseName="expense" inverseEntity="Frequency" syncable="YES"/>
-    </entity>
+    <entity name="Expense" representedClassName="Expense" parentEntity="Transaction" syncable="YES"/>
     <entity name="Frequency" representedClassName="Frequency" syncable="YES">
-        <attribute name="endDate" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="frequency" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="expense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Expense" inverseName="frequency" inverseEntity="Expense" syncable="YES"/>
-        <relationship name="income" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Income" inverseName="frequency" inverseEntity="Income" syncable="YES"/>
+        <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="frequency" inverseEntity="Transaction" syncable="YES"/>
     </entity>
-    <entity name="Income" representedClassName="Income" parentEntity="Transaction" syncable="YES">
-        <relationship name="amount" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Amount" inverseName="income" inverseEntity="Amount" syncable="YES"/>
-        <relationship name="frequency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Frequency" inverseName="income" inverseEntity="Frequency" syncable="YES"/>
-    </entity>
-    <entity name="Transaction" representedClassName="Transaction" isAbstract="YES" syncable="YES">
+    <entity name="Income" representedClassName="Income" parentEntity="Transaction" syncable="YES"/>
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="endTerm" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startTerm" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="transactionId" optional="YES" attributeType="String" defaultValueString="0" indexed="YES" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transaction" inverseEntity="Account" syncable="YES"/>
+        <relationship name="frequency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Frequency" inverseName="transaction" inverseEntity="Frequency" syncable="YES"/>
     </entity>
     <elements>
         <element name="Account" positionX="-153" positionY="24" width="128" height="88"/>
-        <element name="Amount" positionX="-47" positionY="459" width="128" height="88"/>
-        <element name="Frequency" positionX="-306" positionY="423" width="128" height="118"/>
-        <element name="Income" positionX="-36" positionY="278" width="128" height="73"/>
-        <element name="Expense" positionX="-315" positionY="278" width="128" height="73"/>
-        <element name="Transaction" positionX="-155" positionY="180" width="128" height="73"/>
+        <element name="Expense" positionX="70" positionY="279" width="128" height="45"/>
+        <element name="Frequency" positionX="-155" positionY="369" width="128" height="73"/>
+        <element name="Income" positionX="-306" positionY="279" width="128" height="45"/>
+        <element name="Transaction" positionX="-155" positionY="180" width="128" height="150"/>
     </elements>
 </model>

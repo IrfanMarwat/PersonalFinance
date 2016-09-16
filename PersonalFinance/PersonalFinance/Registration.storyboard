@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Registration View Controller-->
@@ -18,17 +19,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2z-vf-Khk">
-                                <rect key="frame" x="150" y="215" width="300" height="170"/>
+                                <rect key="frame" x="150" y="155" width="300" height="170"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Account Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XiP-PW-Yzg" customClass="JVFloatLabeledTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Account Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XiP-PW-Yzg" customClass="AccountTextField" customModule="PersonalFinance" customModuleProvider="target">
                                         <rect key="frame" x="5" y="5" width="290" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Account Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e96-zV-0Gc" customClass="JVFloatLabeledTextField">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Account Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e96-zV-0Gc" customClass="CharacterTextField" customModule="PersonalFinance" customModuleProvider="target">
                                         <rect key="frame" x="5" y="60" width="290" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="iOG-8b-GF0" id="cn8-L8-54C"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpW-Bb-5Wj">
                                         <rect key="frame" x="5" y="115" width="290" height="50"/>
@@ -61,11 +65,29 @@
                                     <constraint firstItem="wpW-Bb-5Wj" firstAttribute="top" secondItem="e96-zV-0Gc" secondAttribute="bottom" constant="5" id="vqA-v1-nTK"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONLY ONCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTy-mS-YgS">
+                                <rect key="frame" x="253" y="84" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.29494390209999999" blue="0.1517702964" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LB7-YO-srj">
+                                <rect key="frame" x="201" y="109" width="200" height="2"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="GrV-4D-WUw"/>
+                                    <constraint firstAttribute="width" constant="200" id="hjP-LN-n27"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LB7-YO-srj" firstAttribute="top" secondItem="RTy-mS-YgS" secondAttribute="bottom" constant="4" id="8g8-EC-YGh"/>
+                            <constraint firstItem="RTy-mS-YgS" firstAttribute="centerX" secondItem="XnZ-aK-QjI" secondAttribute="centerX" id="mZp-ZR-mgA"/>
                             <constraint firstItem="J2z-vf-Khk" firstAttribute="centerX" secondItem="XnZ-aK-QjI" secondAttribute="centerX" id="nkX-2s-iP3"/>
-                            <constraint firstItem="J2z-vf-Khk" firstAttribute="centerY" secondItem="XnZ-aK-QjI" secondAttribute="centerY" id="oOK-Ny-Zjr"/>
+                            <constraint firstItem="J2z-vf-Khk" firstAttribute="centerY" secondItem="XnZ-aK-QjI" secondAttribute="centerY" multiplier="0.8" id="oOK-Ny-Zjr"/>
+                            <constraint firstItem="LB7-YO-srj" firstAttribute="centerX" secondItem="RTy-mS-YgS" secondAttribute="centerX" id="te1-iE-RTb"/>
+                            <constraint firstItem="J2z-vf-Khk" firstAttribute="top" secondItem="RTy-mS-YgS" secondAttribute="bottom" constant="50" id="vNH-JL-l21"/>
                         </constraints>
                     </view>
                     <connections>

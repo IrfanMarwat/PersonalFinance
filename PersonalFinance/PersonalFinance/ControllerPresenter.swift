@@ -6,7 +6,7 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 // ------
-// The concrete instance of this class will have the capability of providing necessary dependencies to the controller before presenting it.
+// The concrete instance of this protocol will have the capability of providing necessary dependencies to the controller before presenting it.
 
 // Dependency provider
 

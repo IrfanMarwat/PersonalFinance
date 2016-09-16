@@ -7,28 +7,35 @@
 //
 
 @objc protocol DashboardStore {
-    var allItems: Array<DashboardCellData> {get}
+    var allDependencies: Array<AnyObject> {get}
     var allIdentifiers: Array<String>{get}
+    var allCellWidths: Array<Double>{get}
+    var allCellHeights: Array<Double>{get}
     
-    func createItem()
+    func createAllDependencies()
 }
 
 class LocalDashboardStore:NSObject, DashboardStore {
-    var _privateItems: Array<DashboardCellData>? = nil
-    let dashboardIdentifiers = ["listingcell", "expensechart"]
+    var _privateItems = Array<AnyObject>()
     
-    @objc func createItem() {
-        if _privateItems != nil {
-            _privateItems?.append(DashboardCellData())
-        } else {
-            _privateItems = Array()
-            _privateItems?.append(DashboardCellData());
-        }
+    let dashboardIdentifiers = ["listingcell", "expensechart"]
+    let dashboardCellWidths = [300.0, 300.0];
+    let dashboardCellHights = [390.0, 548.0];
+    
+    @objc func createAllDependencies() {
+        let accountDetailHandler = AccountDetailHandler(incomeCalculator: incomeCalculator, expenseCalculator: expenseCalculator)
+        
+        _privateItems.append(accountDetailHandler)
+        
+        let chartDependencyProvider = ChartDependencyProvider()
+        chartDependencyProvider.createDependencies()
+        _privateItems.append(chartDependencyProvider)
+        
     }
     
-    @objc internal var allItems:Array<DashboardCellData> {
+    @objc internal var allDependencies:Array<AnyObject> {
         get {
-            return _privateItems!
+            return _privateItems
         }
     }
     
@@ -37,5 +44,38 @@ class LocalDashboardStore:NSObject, DashboardStore {
             return dashboardIdentifiers
         }
     }
+    
+    @objc internal var allCellWidths: Array<Double> {
+        get {
+            return  dashboardCellWidths
+        }
+    }
+    
+    @objc internal var allCellHeights: Array<Double> {
+        get {
+            return  dashboardCellHights
+        }
+    }
+}
 
+class ChartDependencyProvider: NSObject {
+    var chartDatabuilder: PieChartDataBuilder! // dependency
+    var pieChartHandler: PieChartHandler! // dependency
+    var chartTableViewDatasource: ChartTableDatasource! // dependency
+    
+    func createDependencies() {
+        let accountDetailHandler = AccountDetailHandler(incomeCalculator: incomeCalculator, expenseCalculator: expenseCalculator)
+        
+        chartDatabuilder = PieChartDataBuilder(startTerm: 1, endTerm: 12)
+        
+        chartDatabuilder.incomeStore = incomeStore
+        
+        chartDatabuilder.expenseStore = expenseStore
+        
+        chartDatabuilder.accountDetailHandler = accountDetailHandler
+        
+        let datasource = chartDatabuilder.getPieChartDatasource()
+        pieChartHandler = PieChartHandler(datasource: datasource)
+        chartTableViewDatasource = ChartTableDatasource(datasource: datasource)
+    }
 }

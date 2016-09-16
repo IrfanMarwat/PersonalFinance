@@ -6,6 +6,8 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
+import Foundation
+
 @objc protocol AccountStore {
     var allItems: Array<Account>{get}
     func createAccount(account: Account)

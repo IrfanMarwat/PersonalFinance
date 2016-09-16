@@ -8,14 +8,20 @@
 
 #import <UIKit/UIKit.h>
 @class Account;
+@class CharacterTextField;
+@class AccountTextField;
 
 @interface RegistrationViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *textFieldAccountNumber;
-@property (weak, nonatomic) IBOutlet UITextField *textFieldAccountName;
+@property (weak, nonatomic) IBOutlet AccountTextField *textFieldAccountNumber;
+@property (weak, nonatomic) IBOutlet CharacterTextField *textFieldAccountName;
 
 -(void)setAccount:(Account *)account;
 -(void)setStore:(id)store;
 -(void)setControllerLoader:(id)loader;
+-(void)setAlertHandler:(id)alertHandler;
+-(void)setValidator:(id)validator;
+
+-(void)proceedToHome;
 
 @end

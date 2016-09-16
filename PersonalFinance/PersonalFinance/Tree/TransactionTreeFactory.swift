@@ -6,6 +6,12 @@
 //  Copyright © 2016 Irfan. All rights reserved.
 //
 
+import Foundation
+
+enum TransactionTreeButtonTag: Int {
+    case Income
+    case Expense
+}
 
 class TransactionTreeFactory:NSObject, TreeFactory {
     var _privateItems = Array<ParentTreeButton>()
@@ -22,14 +28,15 @@ class TransactionTreeFactory:NSObject, TreeFactory {
         
         _privateItems.removeAll()
         
-        let buttonIncome = SimplePlusButton(frame: frame)
-        buttonIncome.setTitle("Income", forState: UIControlState.Normal)
+        let buttonIncome = SimplePlusButton(name: "Inc", frame: frame)
         buttonIncome.delegate = _dashboardVc
+        buttonIncome.tag = TransactionTreeButtonTag.Income.rawValue
         _privateItems.append(buttonIncome)
         
         let buttonExpense = SimplePlusButton(frame: frame)
-        buttonExpense.setTitle("Expense", forState: UIControlState.Normal)
+        buttonExpense.setTitle("Exp", forState: UIControlState.Normal)
         buttonExpense.delegate = _dashboardVc
+        buttonExpense.tag = TransactionTreeButtonTag.Expense.rawValue
         _privateItems.append(buttonExpense)
     }
     

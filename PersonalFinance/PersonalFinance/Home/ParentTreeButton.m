@@ -7,6 +7,7 @@
 //
 
 #import "ParentTreeButton.h"
+#import <Foundation/Foundation.h>
 
 @interface ParentTreeButton ()
 @end
@@ -29,9 +30,9 @@
     [self addTarget:self action:@selector(btnPressed) forControlEvents:UIControlEventTouchUpInside];
     
     [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [self.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
+//    [self.titleLabel setLineBreakMode:NSLineBreakByWordWrapping];
     
-    [self.titleLabel setFont:[UIFont fontWithName:@"Roboto-Regular" size:5]];
+//    [self.titleLabel setFont:[UIFont fontWithName:@"Roboto-Regular" size:5]];
     
     return self;
 }
@@ -56,7 +57,6 @@
     self.selected = NO;
     self.isExpanded = NO;
 }
-
 
 - (void)expandChildren{
     int i = 0;
